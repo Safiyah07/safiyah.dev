@@ -7,6 +7,8 @@ export default {
 			backgroundImage: {
 				gradient:
 					"linear-gradient(to right, #0c0c0d 0%, #bdff68 25%, #0c0c0d 50%, #e066ff 75%, #0c0c0d 100%)",
+				"light-gradient":
+					"linear-gradient(to right, #f8f8ff 0%, #bdff68 25%, #f8f8ff 50%, #e066ff 75%, #f8f8ff 100%)",
 			},
 			colors: {
 				dark: "#0b1215",
@@ -17,6 +19,7 @@ export default {
 			},
 			boxShadow: {
 				"3xl": "0px 3px 2px 0px rgba(35, 35, 35, 0.5)",
+				"light-3xl": "0px 1px 2px 0px rgba(35, 35, 35, 0.5)",
 			},
 		},
 		screens: {
