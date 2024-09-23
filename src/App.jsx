@@ -1,5 +1,14 @@
+import { ThemeProvider } from "./context/ThemeContext";
+import Home from "./pages/Home";
+
 function App() {
-	return <div className="text-3xl">Hello World</div>;
+	return (
+		<ThemeProvider>
+			<div>
+				<Home />{" "}
+			</div>
+		</ThemeProvider>
+	);
 }
 
 export default App;
