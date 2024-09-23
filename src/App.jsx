@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 import { ThemeProvider } from "./context/ThemeContext";
 import Home from "./pages/Home";
+import Header from "./components/Header";
 
 function App() {
 	const router = createBrowserRouter(
@@ -34,7 +35,12 @@ function App() {
 }
 
 export const Root = () => {
-	return <Outlet />;
+	return (
+		<>
+			<Header />
+			<Outlet />
+		</>
+	);
 };
 
 export default App;
