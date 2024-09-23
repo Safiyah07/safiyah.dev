@@ -30,7 +30,7 @@ function Header() {
 						<a
 							href={`#${item.name}`}
 							className={`${
-								pathMatchRoute(`#${item.name}`) && " font-medium"
+								pathMatchRoute(`#${item.name}`) && " font-semibold"
 							} capitalize hover:font-medium transition-all ease-in-out duration-300`}
 							key={id}
 						>

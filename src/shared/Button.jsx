@@ -11,7 +11,7 @@ function Button({ children }) {
 				theme === "light"
 					? "bg-light-gradient shadow-light-3xl"
 					: "bg-gradient shadow-3xl"
-			} relative p-1 h-auto rounded-[20px] bg-gradient`}
+			} relative p-1 h-auto rounded-[20px] bg-gradient w-fit`}
 		>
 			<div
 				className={`${
