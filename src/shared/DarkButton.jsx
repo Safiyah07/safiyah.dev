@@ -2,8 +2,10 @@ import PropTypes from "prop-types";
 
 function DarkButton({ children }) {
 	return (
-		<div className="px-3 py-2 border-4 rounded-xl gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90%">
-			{children}
+		<div className="relative p-1 h-auto rounded-[20px] bg-gradient shadow-3xl">
+			<div className="h-full w-full bg-dark rounded-[18px] px-5 py-2">
+				{children}
+			</div>
 		</div>
 	);
 }
