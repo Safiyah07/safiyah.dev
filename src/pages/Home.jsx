@@ -1,3 +1,6 @@
+import { Link } from "react-router-dom";
+import DarkButton from "../shared/DarkButton";
+
 function Home() {
 	const nav = [
 		{
@@ -11,15 +14,22 @@ function Home() {
 		},
 	];
 	return (
-		<main className="py-5 px-10">
-			<section className="flex justify-between">
-				<h1 className="text-xl font-semibold">Safiyah</h1>
-				<ul className="flex gap-4 capitalize">
+		<main className="py-5 px-20">
+			<section className="flex justify-between font-normal">
+				<h1 className="text-xl font-medium tracking-wider">Safiyah</h1>
+				<div className="flex items-center gap-16 capitalize">
 					{nav.map((item, id) => (
-						<li key={id}>{item.name}</li>
+						<Link
+							to={`/${item.name}`}
+							key={id}
+						>
+							{item.name}
+						</Link>
 					))}
-					<li>Get in touch</li>
-				</ul>
+					<DarkButton>
+						<a href="mailto:safiyahmasud@gmail.com">Get in touch</a>
+					</DarkButton>
+				</div>
 			</section>
 		</main>
 	);
