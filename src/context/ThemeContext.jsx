@@ -5,7 +5,7 @@ import { createContext, useState, useEffect } from "react";
 const ThemeContext = createContext();
 
 export const ThemeProvider = ({ children }) => {
-	const [theme, setTheme] = useState("light");
+	const [theme, setTheme] = useState("dark");
 
 	useEffect(() => {
 		const storedTheme = localStorage.getItem("theme");

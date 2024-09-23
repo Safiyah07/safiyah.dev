@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import ThemeContext from "../context/ThemeContext";
 import { useContext } from "react";
 
-function DarkButton({ children }) {
+function Button({ children }) {
 	const { theme } = useContext(ThemeContext);
 
 	return (
@@ -24,8 +24,8 @@ function DarkButton({ children }) {
 	);
 }
 
-DarkButton.propTypes = {
+Button.propTypes = {
 	children: PropTypes.any,
 };
 
-export default DarkButton;
+export default Button;

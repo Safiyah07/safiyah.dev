@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
-import DarkButton from "../shared/DarkButton";
+import Button from "../shared/Button";
 
 function Home() {
 	const nav = [
@@ -46,9 +46,9 @@ function Home() {
 					>
 						About
 					</Link>
-					<DarkButton>
+					<Button>
 						<a href="mailto:safiyahmasud@gmail.com">Get in touch</a>
-					</DarkButton>
+					</Button>
 				</div>
 			</section>
 		</main>
