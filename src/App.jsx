@@ -36,10 +36,10 @@ function App() {
 
 export const Root = () => {
 	return (
-		<>
+		<main className="py-5 lg:px-20 md:px-10 sm:px-5 max-w-full">
 			<Header />
 			<Outlet />
-		</>
+		</main>
 	);
 };
 

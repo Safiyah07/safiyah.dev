@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Cross as Hamburger } from "hamburger-react";
 import Button from "../shared/Button";
 import { Link, useLocation } from "react-router-dom";
 
@@ -28,7 +27,7 @@ function Header() {
 	};
 
 	return (
-		<section className="py-5 absolute w-svw h-svh z-10 lg:px-20 md:px-10 sm:px-5">
+		<section className="absolute w-[88svw] m-auto h-svh z-10">
 			<section className="font-normal w-full">
 				<div className="flex justify-between items-center">
 					<Link to="/">
@@ -37,15 +36,22 @@ function Header() {
 					{/* Desktop menu */}
 					<div className="flex md:hidden sm:hidden items-center h-full relative gap-16 text-xl w-auto">
 						{nav.map((item, id) => (
-							<a
-								href={`#${item.name}`}
+							<Link
+								key={id}
+								to={`/#${item.name}`}
 								className={`${
 									pathMatchRoute(`#${item.name}`) && " font-semibold"
 								} capitalize hover:font-medium transition-all ease-in-out duration-300`}
-								key={id}
 							>
+								{/* <a
+									href={`#${item.name}`}
+									className={`${
+										pathMatchRoute(`#${item.name}`) && " font-semibold"
+									} capitalize hover:font-medium transition-all ease-in-out duration-300`}
+								> */}
 								{item.name}
-							</a>
+								{/* </a> */}
+							</Link>
 						))}
 						{/* ${
 								location.pathname === "/" && "font-medium"
@@ -72,24 +78,31 @@ function Header() {
 					</div>
 				</div>
 
-				{/* md and sm menu display */}
+				{/* md and sm menu */}
 				<div
 					className={`${
 						showMenu
 							? "hidden"
-							: "flex flex-col items-center justify-center gap-16 text-xl h-auto rounded-xl p-5 my-[50px] bg-dark border"
+							: "flex flex-col items-center justify-center gap-16 h-auto rounded-xl p-5 my-[50px] bg-dark text-2xl lg:hidden"
 					}`}
 				>
 					{nav.map((item, id) => (
-						<a
-							href={`#${item.name}`}
+						<Link
+							key={id}
+							to={`/#${item.name}`}
 							className={`${
 								pathMatchRoute(`#${item.name}`) && " font-semibold"
 							} capitalize hover:font-medium transition-all ease-in-out duration-300`}
-							key={id}
 						>
+							{/* <a
+							href={`/#${item.name}`}
+							className={`${
+								pathMatchRoute(`#${item.name}`) && " font-semibold"
+							} capitalize hover:font-medium transition-all ease-in-out duration-300`}
+						> */}
 							{item.name}
-						</a>
+							{/* </a> */}
+						</Link>
 					))}
 					{/* ${
 								location.pathname === "/" && "font-medium"
