@@ -29,7 +29,7 @@ function Header() {
 	return (
 		<section className="absolute w-[88svw] m-auto h-svh z-10">
 			<section className="font-normal w-full">
-				<div className="flex justify-between items-center">
+				<div className="flex justify-between items-center z-20">
 					<Link to="/">
 						<h1 className="text-xl font-medium tracking-wider">Safiyah</h1>
 					</Link>
@@ -81,10 +81,8 @@ function Header() {
 				{/* md and sm menu */}
 				<div
 					className={`${
-						showMenu
-							? "hidden"
-							: "flex flex-col items-center justify-center gap-16 h-auto rounded-xl p-5 my-[50px] bg-dark text-2xl lg:hidden"
-					}`}
+						showMenu ? "-translate-y-[550px]" : "translate-y-[0px]"
+					} flex flex-col items-center justify-center gap-16 h-[50svh] rounded-xl p-5 my-[50px] bg-dark text-2xl lg:hidden transition-all ease-in-out duration-500`}
 				>
 					{nav.map((item, id) => (
 						<Link
