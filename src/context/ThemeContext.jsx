@@ -29,7 +29,9 @@ export const ThemeProvider = ({ children }) => {
 		>
 			<div
 				className={
-					theme === "light" ? "bg-light text-dark" : "bg-dark text-light"
+					theme === "light"
+						? "bg-light text-dark min-h-svh"
+						: "bg-dark text-light min-h-svh"
 				}
 			>
 				{children}
