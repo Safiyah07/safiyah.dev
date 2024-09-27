@@ -85,7 +85,7 @@ function Header() {
 				<div
 					className={`${
 						showMenu ? "-translate-y-[950px]" : "translate-y-[0px]"
-					} flex flex-col items-center justify-center gap-16 h-[80svh] rounded-xl p-5 my-[50px] bg-dark text-2xl lg:hidden max-md:hidden transition-all ease-in-out duration-500 relative z-10 shadow-2xl`}
+					} flex flex-col items-center justify-center gap-16 h-[80svh] rounded-xl p-5 my-[50px] sm:my-0 sm:p-0 sm:h-svh bg-dark text-2xl lg:hidden max-md:hidden transition-all ease-in-out duration-500 relative z-10`}
 				>
 					{nav.map((item, id) => (
 						<Link

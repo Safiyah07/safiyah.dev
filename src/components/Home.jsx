@@ -31,7 +31,7 @@ function Home() {
 						</h1>
 					</div>
 					{/* <h1>Developer</h1> */}
-					<p className="lg:w-1/2 max-md:w-1/2 md:w-3/4 sm:w-4/5">
+					<p className="lg:w-1/2 max-md:w-1/2 md:w-3/4 sm:w-full">
 						Hi, I’m Safiyah, I develop beautiful and efficient websites and web
 						apps. When i&apos;m not coding, i explore psychology and indulge in
 						culinary adventures.
