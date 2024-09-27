@@ -9,7 +9,7 @@ function Home() {
 	const { theme } = useContext(ThemeContext);
 
 	return (
-		<section id="#home">
+		<section id="home">
 			<div className="lg:pl-40 w-full text-xl">
 				<div className="flex flex-col gap-8">
 					<div className="tracking-widest leading-tight text-[80px] md:text-[60px] sm:text-[35px] lg:w-3/4">

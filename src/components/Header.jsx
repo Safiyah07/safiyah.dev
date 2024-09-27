@@ -41,7 +41,7 @@ function Header() {
 						{nav.map((item, id) => (
 							<Link
 								key={id}
-								to={`/#${item.name}`}
+								to={`#${item.name}`}
 								className={`${
 									pathMatchRoute(`#${item.name}`) && " font-semibold"
 								} capitalize hover:font-medium transition-all ease-in-out duration-300`}
@@ -90,13 +90,13 @@ function Header() {
 					{nav.map((item, id) => (
 						<Link
 							key={id}
-							to={`/#${item.name}`}
+							to={`#${item.name}`}
 							className={`${
 								pathMatchRoute(`#${item.name}`) && " font-semibold"
 							} capitalize hover:font-medium transition-all ease-in-out duration-300`}
 						>
 							{/* <a
-							href={`/#${item.name}`}
+							href={`#${item.name}`}
 							className={`${
 								pathMatchRoute(`#${item.name}`) && " font-semibold"
 							} capitalize hover:font-medium transition-all ease-in-out duration-300`}

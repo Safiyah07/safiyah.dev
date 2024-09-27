@@ -1,3 +1,4 @@
+import { useContext } from "react";
 import {
 	createBrowserRouter,
 	createRoutesFromElements,
@@ -6,9 +7,9 @@ import {
 	RouterProvider,
 } from "react-router-dom";
 import ThemeContext, { ThemeProvider } from "./context/ThemeContext";
-import Home from "./pages/Home";
 import Header from "./components/Header";
-import { useContext } from "react";
+import Footer from "./components/Footer";
+import Home from "./pages/Home";
 
 function App() {
 	const router = createBrowserRouter(
@@ -41,12 +42,13 @@ export const Root = () => {
 	return (
 		<main
 			className={`
-					${
-						theme === "light" ? "bg-light text-dark" : "bg-dark text-light"
-					} min-h-[20rem] h-full py-5 px-20 md:px-10 sm:px-5`}
+					${theme === "light" ? "bg-light text-dark" : "bg-dark text-light"} h-full pt-5`}
 		>
-			<Header />
-			<Outlet />
+			<div className="px-20 md:px-10 sm:px-5">
+				<Header />
+				<Outlet />
+			</div>
+			<Footer />
 		</main>
 	);
 };

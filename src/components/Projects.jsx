@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 function Projects() {
 	return (
-		<section id="#Projects">
+		<section id="projects">
 			<div className="lg:pl-40 lg:w-4/5 text-xl">
 				<h1 className="text-3xl sm:text-xl pb-20 sm:pb-10">Case Studies</h1>
 				<div className="bg-p1 rounded-2xl flex flex-col gap-10 px-16 py-10">
