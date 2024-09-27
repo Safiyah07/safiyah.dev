@@ -23,9 +23,10 @@ export default {
 			},
 		},
 		screens: {
-			sm: { max: "479px" },
-			md: { min: "480px", max: "880px" },
-			lg: { min: "881px" },
+			sm: { max: "569px" },
+			md: { min: "570px", max: "880px" },
+			"max-md": { min: "881px", max: "1115px" },
+			lg: { min: "1116px" },
 		},
 	},
 	plugins: [],

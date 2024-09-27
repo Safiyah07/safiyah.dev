@@ -31,7 +31,7 @@ export const ThemeProvider = ({ children }) => {
 				className={`
 					${
 						theme === "light" ? "bg-light text-dark" : "bg-dark text-light"
-					} min-h-svh py-5 lg:px-20 md:px-10 sm:px-5 max-w-full`}
+					} min-h-svh py-5 px-20 md:px-10 sm:px-5 max-w-full`}
 			>
 				{children}
 			</main>

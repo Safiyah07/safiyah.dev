@@ -7,11 +7,11 @@ function Home() {
 			className="lg:pl-40 w-full h-[80svh] text-xl"
 		>
 			<div className="flex flex-col gap-8">
-				<h1 className="tracking-widest leading-tight lg:text-[80px] md:text-[63px] sm:text-[40px] lg:w-3/4">
+				<h1 className="tracking-widest leading-tight text-[80px] md:text-[60px] sm:text-[40px] lg:w-3/4">
 					Full-Stack Developer
 				</h1>
 				{/* <h1>Developer</h1> */}
-				<p className="lg:w-1/2 w-3/4">
+				<p className="lg:w-1/2 max-md:w-1/2 md:w-3/4 sm:w-4/5">
 					Hi, I’m Safiyah , I develop beautiful and efficient websites and web
 					apps. When i&apos;m not coding, i explore psychology and indulge in
 					culinary adventures.

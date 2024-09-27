@@ -72,7 +72,7 @@ function Header() {
 					{/* md and sm menu btn */}
 					<div
 						onClick={menuDisplay}
-						className="lg:hidden cursor-pointer font-normal"
+						className="lg:hidden max-md:hidden cursor-pointer font-normal"
 					>
 						<Button>{showMenu ? <div>Menu</div> : <div>Close</div>}</Button>
 					</div>
@@ -82,7 +82,7 @@ function Header() {
 				<div
 					className={`${
 						showMenu ? "-translate-y-[950px]" : "translate-y-[0px]"
-					} flex flex-col items-center justify-center gap-16 h-[80svh] rounded-xl p-5 my-[50px] bg-dark text-2xl lg:hidden transition-all ease-in-out duration-500 relative z-10 border`}
+					} flex flex-col items-center justify-center gap-16 h-[80svh] rounded-xl p-5 my-[50px] bg-dark text-2xl lg:hidden max-md:hidden transition-all ease-in-out duration-500 relative z-10 shadow-2xl`}
 				>
 					{nav.map((item, id) => (
 						<Link

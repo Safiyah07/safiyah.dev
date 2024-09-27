@@ -16,7 +16,7 @@ function Button({ children }) {
 			<div
 				className={`${
 					theme === "light" ? "bg-light" : "bg-dark"
-				} h-full w-full bg-dark rounded-[18px] px-5 py-2`}
+				} h-full w-full bg-dark rounded-[18px] px-5 py-2 sm:pt-1`}
 			>
 				{children}
 			</div>
