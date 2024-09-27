@@ -45,7 +45,7 @@ function Home() {
 				</div>
 			</div>
 
-			<div className="flex justify-center items-center animate-bounce sm:hidden">
+			<div className="flex justify-center items-center pb-20 animate-bounce sm:hidden">
 				<BsChevronDoubleDown size={30} />
 			</div>
 		</section>

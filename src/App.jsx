@@ -37,12 +37,13 @@ function App() {
 
 export const Root = () => {
 	const { theme } = useContext(ThemeContext);
+
 	return (
 		<main
 			className={`
 					${
 						theme === "light" ? "bg-light text-dark" : "bg-dark text-light"
-					} min-h-svh h-full max-h-fit py-5 px-20 md:px-10 sm:px-5 max-w-full`}
+					} min-h-[20rem] h-full py-5 px-20 md:px-10 sm:px-5`}
 		>
 			<Header />
 			<Outlet />

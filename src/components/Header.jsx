@@ -27,7 +27,10 @@ function Header() {
 	};
 
 	return (
-		<section className="w-full m-auto h-svh">
+		<section
+			// style={{ width: "-webkit-fill-available" }}
+			className="absolute top-0 pr-20 md:pr-10 sm:pr-5 pt-5 pb-20 wid m-auto"
+		>
 			<div className="font-normal w-full">
 				<div className="flex justify-between items-center">
 					<Link to="/">

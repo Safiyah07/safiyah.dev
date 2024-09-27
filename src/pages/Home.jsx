@@ -3,7 +3,7 @@ import Projects from "../components/Projects";
 
 function Home() {
 	return (
-		<main className="translate-y-32 sm:translate-y-44 absolute top-0 flex flex-col gap-20">
+		<main className="translate-y-32 sm:translate-y-44 flex flex-col gap-20 h-fit">
 			<HomePage />
 			<Projects />
 		</main>
