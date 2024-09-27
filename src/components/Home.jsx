@@ -2,7 +2,7 @@ import Button from "./../shared/Button";
 
 function Home() {
 	return (
-		<main
+		<section
 			id="#home"
 			className="lg:pl-40 w-full h-[80svh] text-xl"
 		>
@@ -23,7 +23,7 @@ function Home() {
 					<Button>Get in touch</Button>
 				</a>
 			</div>
-		</main>
+		</section>
 	);
 }
 

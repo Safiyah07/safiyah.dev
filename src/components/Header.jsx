@@ -27,8 +27,8 @@ function Header() {
 	};
 
 	return (
-		<section className="absolute w-[88svw] m-auto h-svh">
-			<section className="font-normal w-full">
+		<section className="w-full m-auto h-svh">
+			<div className="font-normal w-full">
 				<div className="flex justify-between items-center">
 					<Link to="/">
 						<h1 className="text-xl font-medium tracking-wider">Safiyah</h1>
@@ -82,7 +82,7 @@ function Header() {
 				<div
 					className={`${
 						showMenu ? "-translate-y-[950px]" : "translate-y-[0px]"
-					} flex flex-col items-center justify-center gap-16 h-[80svh] rounded-xl p-5 my-[50px] bg-dark text-2xl lg:hidden transition-all ease-in-out duration-500 relative z-10`}
+					} flex flex-col items-center justify-center gap-16 h-[80svh] rounded-xl p-5 my-[50px] bg-dark text-2xl lg:hidden transition-all ease-in-out duration-500 relative z-10 border`}
 				>
 					{nav.map((item, id) => (
 						<Link
@@ -117,7 +117,7 @@ function Header() {
 						<a href="mailto:safiyahmasud@gmail.com">Get in touch</a>
 					</Button>
 				</div>
-			</section>
+			</div>
 		</section>
 	);
 }

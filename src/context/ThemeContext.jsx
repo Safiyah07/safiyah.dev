@@ -27,15 +27,14 @@ export const ThemeProvider = ({ children }) => {
 				toggleTheme,
 			}}
 		>
-			<div
-				className={
-					theme === "light"
-						? "bg-light text-dark min-h-svh"
-						: "bg-dark text-light min-h-svh"
-				}
+			<main
+				className={`
+					${
+						theme === "light" ? "bg-light text-dark" : "bg-dark text-light"
+					} min-h-svh py-5 lg:px-20 md:px-10 sm:px-5 max-w-full`}
 			>
 				{children}
-			</div>
+			</main>
 		</ThemeContext.Provider>
 	);
 };
