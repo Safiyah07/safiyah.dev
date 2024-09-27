@@ -5,7 +5,7 @@ import { useContext } from "react";
 import ThemeContext from "../context/ThemeContext";
 
 function Footer() {
-	const { setTheme } = useContext(ThemeContext);
+	const { theme, setTheme } = useContext(ThemeContext);
 
 	return (
 		<section className="pt-20 text-2xl">
@@ -22,14 +22,16 @@ function Footer() {
 						</div>
 
 						<div className="flex flex-col gap-5">
-							<Button>
+							<Button className={""}>
 								<div className="flex gap-5">
 									<BsSun
 										className="cursor-pointer"
 										onClick={() => setTheme("light")}
 									/>{" "}
 									<BsMoon
-										className="cursor-pointer"
+										className={`${
+											theme === "dark" && "bg-purple"
+										} cursor-pointer`}
 										onClick={() => setTheme("dark")}
 									/>
 								</div>
