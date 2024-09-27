@@ -9,6 +9,7 @@ export default {
 					"linear-gradient(to right, #0c0c0d 0%, #bdff68 25%, #0c0c0d 50%, #e066ff 75%, #0c0c0d 100%)",
 				"light-gradient":
 					"linear-gradient(to right, #f8f8ff 0%, #bdff68 25%, #f8f8ff 50%, #e066ff 75%, #f8f8ff 100%)",
+				p1: "linear-gradient(142deg, rgba(226, 255, 188, 0.5) 0%, rgba(11, 18, 21, 0.62) 9%, rgba(11, 18, 21, 1) 52%, rgba(11, 18, 21, 0.62) 86%, rgba(226, 255, 188, 0.5) 100%)",
 			},
 			colors: {
 				dark: "#0b1215",
