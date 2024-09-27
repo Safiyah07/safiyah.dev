@@ -4,14 +4,6 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --theme-color: ${theme};
-}
-
-body {
-  background-color: var(--theme-color);
-}
-
 h1,
 h4 {
 	font-family: "Michroma", sans-serif;
