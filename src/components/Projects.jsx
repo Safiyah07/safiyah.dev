@@ -21,7 +21,7 @@ function Projects() {
 								alt=""
 							/>
 						</div>
-						<div className="w-auto h-[10px] bg-gray-500 opacity-50 rounded-full blur-lg"></div>
+						<div className="w-auto h-[15px] bg-shadow opacity-50 rounded-[100%] blur-[10px]"></div>
 					</div>
 
 					<h1 className="sm:text-lg">

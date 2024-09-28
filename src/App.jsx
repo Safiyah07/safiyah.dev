@@ -10,6 +10,7 @@ import ThemeContext, { ThemeProvider } from "./context/ThemeContext";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
+import About from "./pages/About";
 
 function App() {
 	const router = createBrowserRouter(
@@ -22,7 +23,10 @@ function App() {
 					element={<Home />}
 					index
 				/>
-				<Route path="/about" />
+				<Route
+					path="/about"
+					element={<About />}
+				/>
 				{/* Dynamic route below */}
 				<Route path="/page-preview" />
 			</Route>
