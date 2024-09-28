@@ -11,12 +11,12 @@ function Footer() {
 		<section className="pt-20 text-2xl">
 			<Button>
 				<div>
-					<div className="flex md:flex-col sm:flex-col gap-20 md:gap-10 sm:gap-10 px-20 md:pl-0 sm:px-0 py-20 justify-between">
+					<div className="flex md:flex-col sm:flex-col gap-20 md:gap-10 sm:gap-10 px-16 md:pl-0 sm:px-0 py-20 justify-between">
 						<div className="flex flex-col gap-20 md:gap-10 sm:gap-10 md:w-full sm:w-full w-3/5">
 							<h1 className="tracking-widest leading-tight text-[50px] max-md:text-[40px] md:text-3xl sm:text-2xl capitalize">
 								Let&apos;s talk about your project
 							</h1>
-							<Button>
+							<Button className={"px-7"}>
 								<a href="mailto:safiyahmasud@gmail.com">Get in touch</a>
 							</Button>
 						</div>
@@ -37,8 +37,10 @@ function Footer() {
 								</div>
 							</Button>
 							<Link to={"/about"}>CV</Link>
-							<Link to={"/about"}>LinkedIn</Link>
-							<Link to={"/about"}>Twitter/X</Link>
+							<Link to={"https://www.linkedin.com/in/safiyah-amedu-9424b6230/"}>
+								LinkedIn
+							</Link>
+							<Link to={"https://twitter.com/Sa_fi_yah"}>Twitter/X</Link>
 						</div>
 					</div>
 
