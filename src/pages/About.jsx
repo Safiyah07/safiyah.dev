@@ -42,9 +42,7 @@ function About() {
 	return (
 		<main className="pt-32 sm:pt-44 flex flex-col gap-20 text-xl">
 			<section className="pb-36">
-				<h1 className="text-2xl sm:text-xl mb-4">
-					Hey There, I&apos;m Safiyah
-				</h1>
+				<h1 className="text-2xl sm:text-xl mb-4">Hey There, I’m Safiyah</h1>
 
 				<p>
 					A freelance full-stack developer with 2 years of experience under my
