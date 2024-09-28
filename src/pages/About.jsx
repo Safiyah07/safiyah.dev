@@ -1,6 +1,5 @@
 import {
 	FaBootstrap,
-	FaCss3,
 	FaCss3Alt,
 	FaFigma,
 	FaHtml5,
