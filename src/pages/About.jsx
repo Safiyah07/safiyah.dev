@@ -39,8 +39,9 @@ function About() {
 	];
 
 	return (
-		<main className="pt-32 sm:pt-44 flex flex-col gap-20 text-xl">
-			<section className="pb-36">
+		<main className="pt-32 sm:pt-24 flex flex-col gap-20 sm:gap-14 text-xl">
+			{/* intro */}
+			<section className="pb-36 sm:pb-20">
 				<h1 className="text-2xl sm:text-xl mb-4">Hey There, I’m Safiyah</h1>
 
 				<p>
@@ -59,13 +60,21 @@ function About() {
 					need a friendly ear or a shoulder to lean on, I’m here for you.
 				</p>
 			</section>
-			<section className="">
-				<Button className={"py-20 w-full px-28"}>
-					<h1 className="text-2xl sm:text-xl mb-10">What i can do for you</h1>
 
-					<div className="flex justify-between gap-[100px]">
+			{/* offers */}
+			<section className="">
+				<Button
+					className={"py-20 w-full lg:px-28 max-md:px-10 sm:px-5 sm:pt-5"}
+				>
+					<h1 className="text-2xl sm:text-xl mb-10 sm:mt-10">
+						What i can do for you
+					</h1>
+
+					<div className="flex md:flex-col sm:flex-col justify-between gap-[100px]">
 						<div>
-							<h1 className="mb-5">Frontend Development</h1>
+							<h1 className="mb-5 max-md:text-lg sm:text-lg">
+								Frontend Development
+							</h1>
 							<ul className="list-disc ml-[1.4rem] flex flex-col gap-5">
 								<li>Build responsive and interactive UIs.</li>
 								<li>Develop dynamic apps.</li>
@@ -77,7 +86,9 @@ function About() {
 						</div>
 
 						<div>
-							<h1 className="mb-5">Backend Development</h1>
+							<h1 className="mb-5 max-md:text-lg sm:text-lg">
+								Backend Development
+							</h1>
 							<ul className="list-disc ml-[1.4rem] flex flex-col gap-5">
 								<li>Create robust APIs with Node.js and Express.js.</li>
 								<li>Manage databases using MongoDB.</li>
@@ -87,17 +98,19 @@ function About() {
 					</div>
 				</Button>
 			</section>
+
+			{/* skills */}
 			<section>
 				<h1 className="text-2xl sm:text-xl mb-10">Tech Stack / Tools</h1>
 				<div className="flex flex-col gap-10">
 					{/* frontend */}
 					<div>
 						<h1 className="mb-5 text-lg">Frontend</h1>
-						<div className="grid grid-cols-4 w-full">
+						<div className="grid grid-cols-4 md:grid-cols-3 sm:grid-cols-2 w-full">
 							{frontend.map((item, id) => (
 								<div
 									key={id}
-									className="flex justify-center items-center gap-3 mb-5 border w-40 py-2 rounded-full"
+									className="flex justify-center items-center gap-3 sm:gap-2 mb-5 border w-40 sm:w-36 py-2 rounded-full"
 								>
 									{item.icon}
 									<p>{item.name}</p>
@@ -109,11 +122,11 @@ function About() {
 					{/* backend */}
 					<div>
 						<h1 className="mb-5 text-lg">Backend</h1>
-						<div className="grid grid-cols-4 w-full">
+						<div className="grid grid-cols-4 md:grid-cols-3 sm:grid-cols-2 w-full">
 							{backend.map((item, id) => (
 								<div
 									key={id}
-									className="flex justify-center items-center gap-3 mb-5 border w-40 py-2 rounded-full"
+									className="flex justify-center items-center gap-3 sm:gap-2 mb-5 border w-40 sm:w-36 py-2 rounded-full"
 								>
 									{item.icon}
 									<p>{item.name}</p>
@@ -125,11 +138,11 @@ function About() {
 					{/* db and cms */}
 					<div>
 						<h1 className="mb-5 text-lg">Database / Content Management</h1>
-						<div className="grid grid-cols-4 w-full">
+						<div className="grid grid-cols-4 md:grid-cols-3 sm:grid-cols-2 w-full">
 							{db.map((item, id) => (
 								<div
 									key={id}
-									className="flex justify-center items-center gap-3 mb-5 border w-40 py-2 rounded-full"
+									className="flex justify-center items-center gap-3 sm:gap-2 mb-5 border w-40 sm:w-36 py-2 rounded-full"
 								>
 									{item.icon}
 									<p>{item.name}</p>
@@ -141,11 +154,11 @@ function About() {
 					{/* Additional Skills */}
 					<div>
 						<h1 className="mb-5 text-lg">Additional Skills (Basics)</h1>
-						<div className="grid grid-cols-4 w-full">
+						<div className="grid grid-cols-4 md:grid-cols-3 sm:grid-cols-2 w-full">
 							{aSkills.map((item, id) => (
 								<div
 									key={id}
-									className="flex justify-center items-center gap-3 mb-5 border w-40 py-2 rounded-full"
+									className="flex justify-center items-center gap-3 sm:gap-2 mb-5 border w-40 sm:w-36 py-2 rounded-full"
 								>
 									{item.icon}
 									<p>{item.name}</p>
@@ -155,12 +168,15 @@ function About() {
 					</div>
 				</div>
 			</section>
+
+			{/* outro */}
 			<section>
 				<p>
 					When I’m not coding, you can find me exploring my interests in
 					psychology, watching medical procedures (don’t judge!), enjoying
 					delicious yogurt, or indulging in freshly baked bread.
 				</p>
+				<br className="hidden sm:block" />
 				<p>
 					I’m always open to new opportunities and collaborations. Feel free to
 					reach out if you’re interested in working together or simply want to

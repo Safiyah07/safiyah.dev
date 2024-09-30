@@ -44,7 +44,7 @@ function Footer() {
 						</div>
 					</div>
 
-					<div className="flex justify-end pr-20 pb-10">
+					<div className="flex justify-end pr-20 sm:pr-0 pb-10">
 						<Button className={"px-[10px] py-2 rounded-full"}>
 							<BsArrowUp />
 						</Button>

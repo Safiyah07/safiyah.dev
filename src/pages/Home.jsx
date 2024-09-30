@@ -3,7 +3,7 @@ import Projects from "../components/Projects";
 
 function Home() {
 	return (
-		<main className="pt-32 sm:pt-44 flex flex-col gap-20">
+		<main className="flex flex-col gap-20">
 			<HomePage />
 			<Projects />
 		</main>

@@ -1,8 +1,11 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import Button from "../shared/Button";
 import { Link, useLocation } from "react-router-dom";
+import ThemeContext from "../context/ThemeContext";
 
 function Header() {
+	const { theme } = useContext(ThemeContext);
+
 	const [showMenu, setShowMenu] = useState(true);
 
 	const menuDisplay = () => {
@@ -85,7 +88,9 @@ function Header() {
 				<div
 					className={`${
 						showMenu ? "-translate-y-[950px]" : "translate-y-[0px]"
-					} flex flex-col items-center justify-center gap-16 h-[80svh] rounded-xl p-5 my-[50px] sm:my-0 sm:p-0 sm:h-svh bg-dark text-2xl lg:hidden max-md:hidden transition-all ease-in-out duration-500 relative z-10`}
+					} flex flex-col items-center justify-center gap-16 h-[80svh] rounded-xl p-5 my-[50px] sm:my-0 sm:p-0 sm:h-svh ${
+						theme === "dark" ? "bg-dark" : "bg-light"
+					} text-2xl lg:hidden max-md:hidden transition-all ease-in-out duration-500 relative z-10`}
 				>
 					{nav.map((item, id) => (
 						<Link
