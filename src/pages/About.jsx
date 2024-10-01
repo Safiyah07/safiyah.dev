@@ -47,7 +47,6 @@ function About() {
 
 	return (
 		<main className="flex flex-col gap-20 pt-32 text-xl sm:pt-24 sm:gap-14">
-			{/* intro */}
 			<section className="flex flex-col">
 				<h1 className="mb-4 text-2xl sm:text-xl">Hey There, I’m Safiyah</h1>
 
