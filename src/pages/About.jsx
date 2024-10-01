@@ -11,7 +11,7 @@ import Mongodb from "../assets/mongodb.png";
 import Contentful from "../assets/contentful.png";
 import Firebase from "../assets/firebase.png";
 import Figma from "../assets/figma.png";
-import Photopea from "../assets/photopea.png";
+import Photopea from "../assets/Photopea.png";
 import Chat from "../assets/chat.svg";
 import Button from "../shared/Button";
 
