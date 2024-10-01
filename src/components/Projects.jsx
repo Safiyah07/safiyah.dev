@@ -1,25 +1,25 @@
+import { Link } from "react-router-dom";
 import Phone from "../assets/phone.png";
 import Nanny from "../assets/laptop.svg";
 import Button from "../shared/Button";
-import { Link } from "react-router-dom";
 
 function Projects() {
 	return (
 		<section id="projects">
-			<div className="lg:pl-40 lg:w-4/5 text-xl">
-				<h1 className="text-3xl sm:text-xl pb-20 sm:pb-10">Case Studies</h1>
-				<div className="bg-p1 shadow-light-3xl rounded-2xl flex flex-col gap-10 px-16 py-10 md:px-10 sm:px-3">
+			<div className="text-xl lg:pl-40 lg:w-4/5">
+				<h1 className="pb-20 text-3xl sm:text-xl sm:pb-10">Case Studies</h1>
+				<div className="flex flex-col gap-10 px-16 py-10 bg-p1 shadow-light-3xl rounded-2xl md:px-10 sm:px-3">
 					<div className="flex flex-col self-center gap-10 w-max">
-						<div className="flex justify-center items-center">
+						<div className="flex items-center justify-center">
 							<img
 								src={Phone}
 								alt=""
-								className="h-64 relative object-cover rounded-t-2xl hidden sm:hidden md:hidden"
+								className="relative hidden object-cover h-64 rounded-t-2xl sm:hidden md:hidden"
 							/>
 							<img
 								src={Nanny}
 								alt=""
-								className="sm:h-40 object-cover"
+								className="object-cover sm:h-40"
 							/>
 						</div>
 						<div className="w-auto h-[15px] bg-shadow opacity-50 rounded-[100%] blur-[10px]"></div>
@@ -36,7 +36,7 @@ function Projects() {
 					</p>
 
 					<Button>
-						<Link to="/">See Project</Link>
+						<Link to="/display">See Project</Link>
 					</Button>
 				</div>
 			</div>

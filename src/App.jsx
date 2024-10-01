@@ -11,6 +11,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import About from "./pages/About";
+import ProjectDisplay from "./pages/ProjectDisplay";
 
 function App() {
 	const router = createBrowserRouter(
@@ -28,7 +29,10 @@ function App() {
 					element={<About />}
 				/>
 				{/* Dynamic route below */}
-				<Route path="/page-preview" />
+				<Route
+					path="/display"
+					element={<ProjectDisplay />}
+				/>
 			</Route>
 		)
 	);
