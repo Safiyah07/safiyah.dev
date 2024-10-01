@@ -46,12 +46,13 @@ function ProjectDisplay() {
 				</div>
 
 				<div>
-					<div className="flex items-center justify-between">
+					<div className="flex items-center justify-between mb-5">
 						<h1>Nanny Finder Project</h1>
 						<a
 							href="https://nanny-9d0g.onrender.com/"
 							target="_blank"
 							rel="noopener noreferrer"
+							className="sm:hidden"
 						>
 							<Button className={"cursor-pointer"}>View Project</Button>
 						</a>
@@ -59,12 +60,12 @@ function ProjectDisplay() {
 
 					<div className="flex flex-col gap-5">
 						<div className="flex items-baseline gap-2">
-							<h1 className="mb-5 text-lg">Role:</h1>
+							<h1 className="mb-5 text-base">Role:</h1>
 							<p>Full-Stack Developer</p>
 						</div>
 
 						<div className="">
-							<h1 className="text-lg">Problem:</h1>
+							<h1 className="text-base">Problem:</h1>
 							<ul className="ml-6 list-disc">
 								<li>
 									Finding a reliable and trustworthy nanny can be a daunting
@@ -75,7 +76,7 @@ function ProjectDisplay() {
 							</ul>
 						</div>
 						<div className="">
-							<h1 className="text-lg">Solution:</h1>
+							<h1 className="text-base">Solution:</h1>
 							<ul className="ml-6 list-disc">
 								<li>
 									Streamline the process of finding a nanny by providing a
@@ -96,7 +97,7 @@ function ProjectDisplay() {
 
 						{/* key features */}
 						<div className="flex flex-col gap-2">
-							<h1 className="mb-5 text-lg">Key features include:</h1>
+							<h1 className="mb-5 text-base">Key features include:</h1>
 							<ul className="ml-6 list-disc">
 								<li>
 									Easy Registration: I implemented an intuitive registration
@@ -138,7 +139,7 @@ function ProjectDisplay() {
 
 						{/* Tech Stack */}
 						<div className="">
-							<h1 className="mb-5 text-lg">Tech Stack:</h1>
+							<h1 className="mb-5 text-base">Tech Stack:</h1>
 							<div className="grid w-full grid-cols-4 md:grid-cols-3 sm:grid-cols-2">
 								{frontend.map((item, id) => (
 									<div
