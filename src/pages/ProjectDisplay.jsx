@@ -23,7 +23,7 @@ function ProjectDisplay() {
 	];
 
 	return (
-		<section className="pt-20 text-2xl">
+		<section className="pt-20 text-xl">
 			<div className="flex flex-col gap-10 px-16 py-10 bg-p1 shadow-light-3xl rounded-2xl md:px-10 sm:px-3">
 				<div className="flex items-center justify-between">
 					<h1>Nanny App</h1>
