@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import Phone from "../assets/phone.png";
-import Nanny from "../assets/laptop.svg";
+import Nanny from "../assets/Laptop.svg";
 import Button from "../shared/Button";
 
 function Projects() {

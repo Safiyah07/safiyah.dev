@@ -1,4 +1,4 @@
-import Nanny from "../assets/laptop.svg";
+import Nanny from "../assets/Laptop.svg";
 import Button from "./../shared/Button";
 import HTML from "../assets/html.png";
 import CSS from "../assets/css.png";
