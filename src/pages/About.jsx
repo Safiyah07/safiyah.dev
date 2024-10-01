@@ -1,48 +1,55 @@
-import {
-	FaBootstrap,
-	FaCss3Alt,
-	FaFigma,
-	FaHtml5,
-	FaJs,
-	FaNodeJs,
-	FaReact,
-} from "react-icons/fa";
+import HTML from "../assets/html.png";
+import CSS from "../assets/css.png";
+import Bootstrap from "../assets/bootstrap.png";
+import Tailwind from "../assets/tailwind.png";
+import Js from "../assets/js.png";
+import ReactJs from "../assets/reactjs.png";
+import NextJs from "../assets/next.png";
+import NodeJs from "../assets/node.png";
+import Express from "../assets/express.png";
+import Mongodb from "../assets/mongodb.png";
+import Contentful from "../assets/contentful.png";
+import Firebase from "../assets/firebase.png";
+import Figma from "../assets/figma.png";
+import Photopea from "../assets/photopea.png";
+import Chat from "../assets/chat.svg";
 import Button from "../shared/Button";
-import { SiFirebase, SiTailwindcss } from "react-icons/si";
-import { RiNextjsFill } from "react-icons/ri";
 
 function About() {
 	const frontend = [
-		{ name: "HTML", icon: <FaHtml5 /> },
-		{ name: "CSS", icon: <FaCss3Alt /> },
-		{ name: "Tailwind CSS", icon: <SiTailwindcss /> },
-		{ name: "Bootstrap", icon: <FaBootstrap /> },
-		{ name: "Javascript", icon: <FaJs /> },
-		{ name: "React Js", icon: <FaReact /> },
-		{ name: "Next Js", icon: <RiNextjsFill /> },
+		{
+			name: "HTML",
+			icon: HTML,
+		},
+		{ name: "CSS", icon: CSS },
+		{ name: "Tailwind CSS", icon: Tailwind },
+		{ name: "Bootstrap", icon: Bootstrap },
+		{ name: "Javascript", icon: Js },
+		{ name: "React Js", icon: ReactJs },
+		{ name: "Next Js", icon: NextJs },
 	];
 
 	const backend = [
-		{ name: "Node Js", icon: <FaNodeJs /> },
-		{ name: "Express Js", icon: <FaCss3Alt /> },
+		{ name: "Node Js", icon: NodeJs },
+		{ name: "Express Js", icon: Express },
 	];
 
 	const db = [
-		{ name: "MongoDB", icon: <FaHtml5 /> },
-		{ name: "Contentful", icon: <FaCss3Alt /> },
-		{ name: "Firebase", icon: <SiFirebase /> },
+		{ name: "MongoDB", icon: Mongodb },
+		{ name: "Contentful", icon: Contentful },
+		{ name: "Firebase", icon: Firebase },
 	];
 
 	const aSkills = [
-		{ name: "Figma", icon: <FaFigma /> },
-		{ name: "PhotoPea", icon: <FaCss3Alt /> },
+		{ name: "Figma", icon: Figma },
+		{ name: "PhotoPea", icon: Photopea },
 	];
 
 	return (
-		<main className="pt-32 sm:pt-24 flex flex-col gap-20 sm:gap-14 text-xl">
+		<main className="flex flex-col gap-20 pt-32 text-xl sm:pt-24 sm:gap-14">
 			{/* intro */}
-			<section className="pb-36 sm:pb-20">
-				<h1 className="text-2xl sm:text-xl mb-4">Hey There, I’m Safiyah</h1>
+			<section className="flex flex-col">
+				<h1 className="mb-4 text-2xl sm:text-xl">Hey There, I’m Safiyah</h1>
 
 				<p>
 					A freelance full-stack developer with 2 years of experience under my
@@ -59,6 +66,12 @@ function About() {
 					create a supportive and inclusive work environment. So, if you ever
 					need a friendly ear or a shoulder to lean on, I’m here for you.
 				</p>
+
+				<img
+					src={Chat}
+					alt=""
+					className="self-end block mt-10 w-36"
+				/>
 			</section>
 
 			{/* offers */}
@@ -66,7 +79,7 @@ function About() {
 				<Button
 					className={"py-20 w-full lg:px-28 max-md:px-10 sm:px-5 sm:pt-5"}
 				>
-					<h1 className="text-2xl sm:text-xl mb-10 sm:mt-10">
+					<h1 className="mb-10 text-2xl sm:text-xl sm:mt-10">
 						What i can do for you
 					</h1>
 
@@ -101,18 +114,22 @@ function About() {
 
 			{/* skills */}
 			<section>
-				<h1 className="text-2xl sm:text-xl mb-10">Tech Stack / Tools</h1>
+				<h1 className="mb-10 text-2xl sm:text-xl">Tech Stack / Tools</h1>
 				<div className="flex flex-col gap-10">
 					{/* frontend */}
 					<div>
 						<h1 className="mb-5 text-lg">Frontend</h1>
-						<div className="grid grid-cols-4 md:grid-cols-3 sm:grid-cols-2 w-full">
+						<div className="grid w-full grid-cols-4 md:grid-cols-3 sm:grid-cols-2">
 							{frontend.map((item, id) => (
 								<div
 									key={id}
-									className="flex justify-center items-center gap-3 sm:gap-2 mb-5 border w-40 sm:w-36 py-2 rounded-full"
+									className="flex items-center justify-center w-40 gap-3 py-2 mb-5 border rounded-full sm:gap-2 sm:w-36"
 								>
-									{item.icon}
+									<img
+										src={item.icon}
+										className="w-5"
+										alt=""
+									/>
 									<p>{item.name}</p>
 								</div>
 							))}
@@ -122,13 +139,17 @@ function About() {
 					{/* backend */}
 					<div>
 						<h1 className="mb-5 text-lg">Backend</h1>
-						<div className="grid grid-cols-4 md:grid-cols-3 sm:grid-cols-2 w-full">
+						<div className="grid w-full grid-cols-4 md:grid-cols-3 sm:grid-cols-2">
 							{backend.map((item, id) => (
 								<div
 									key={id}
-									className="flex justify-center items-center gap-3 sm:gap-2 mb-5 border w-40 sm:w-36 py-2 rounded-full"
+									className="flex items-center justify-center w-40 gap-3 py-2 mb-5 border rounded-full sm:gap-2 sm:w-36"
 								>
-									{item.icon}
+									<img
+										src={item.icon}
+										className="w-5"
+										alt=""
+									/>
 									<p>{item.name}</p>
 								</div>
 							))}
@@ -138,13 +159,17 @@ function About() {
 					{/* db and cms */}
 					<div>
 						<h1 className="mb-5 text-lg">Database / Content Management</h1>
-						<div className="grid grid-cols-4 md:grid-cols-3 sm:grid-cols-2 w-full">
+						<div className="grid w-full grid-cols-4 md:grid-cols-3 sm:grid-cols-2">
 							{db.map((item, id) => (
 								<div
 									key={id}
-									className="flex justify-center items-center gap-3 sm:gap-2 mb-5 border w-40 sm:w-36 py-2 rounded-full"
+									className="flex items-center justify-center w-40 gap-3 py-2 mb-5 border rounded-full sm:gap-2 sm:w-36"
 								>
-									{item.icon}
+									<img
+										src={item.icon}
+										className="w-5"
+										alt=""
+									/>
 									<p>{item.name}</p>
 								</div>
 							))}
@@ -154,13 +179,17 @@ function About() {
 					{/* Additional Skills */}
 					<div>
 						<h1 className="mb-5 text-lg">Additional Skills (Basics)</h1>
-						<div className="grid grid-cols-4 md:grid-cols-3 sm:grid-cols-2 w-full">
+						<div className="grid w-full grid-cols-4 md:grid-cols-3 sm:grid-cols-2">
 							{aSkills.map((item, id) => (
 								<div
 									key={id}
-									className="flex justify-center items-center gap-3 sm:gap-2 mb-5 border w-40 sm:w-36 py-2 rounded-full"
+									className="flex items-center justify-center w-40 gap-3 py-2 mb-5 border rounded-full sm:gap-2 sm:w-36"
 								>
-									{item.icon}
+									<img
+										src={item.icon}
+										alt=""
+										className="w-5"
+									/>
 									<p>{item.name}</p>
 								</div>
 							))}

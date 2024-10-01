@@ -4,13 +4,18 @@
 @tailwind components;
 @tailwind utilities;
 
-h1,
-h4 {
-	font-family: "Michroma", sans-serif;
+html {
+	scroll-behavior: smooth;
+	will-change: scroll-position;
 }
 
 body {
 	font-family: "Darker Grotesque", sans-serif;
+}
+
+h1,
+h4 {
+	font-family: "Michroma", sans-serif;
 }
 
 .wid {
@@ -18,6 +23,35 @@ body {
 	width: -moz-available; /* WebKit-based browsers will ignore this. */
 	width: -webkit-fill-available; /* Mozilla-based browsers will ignore this. */
 	width: stretch;
+}
+
+.dark-btn::before,
+.light-btn::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	display: block;
+	width: 55%;
+	height: 100%;
+	border-radius: 18px;
+}
+
+.dark-btn::before {
+	right: 0;
+	background-image: linear-gradient(
+		to right,
+		rgba(226, 255, 188, 0.5),
+		rgba(224, 102, 255, 0.5) 19%
+	);
+}
+
+.light-btn::before {
+	left: 0;
+	background-image: linear-gradient(
+		to left,
+		rgba(224, 102, 255, 0.5),
+		rgba(226, 255, 188, 0.5) 19%
+	);
 }
 
 /* :root {

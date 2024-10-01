@@ -11,9 +11,9 @@ function Footer() {
 		<section className="pt-20 text-2xl">
 			<Button>
 				<div>
-					<div className="flex md:flex-col sm:flex-col gap-20 md:gap-10 sm:gap-10 px-16 md:pl-0 sm:px-0 py-20 justify-between">
-						<div className="flex flex-col gap-20 md:gap-10 sm:gap-10 md:w-full sm:w-full w-3/5">
-							<h1 className="tracking-widest leading-tight text-[50px] max-md:text-[40px] md:text-3xl sm:text-2xl capitalize">
+					<div className="flex justify-between gap-20 px-20 py-20 md:px-5 sm:px-5 md:flex-col sm:flex-col md:gap-10 sm:gap-10">
+						<div className="flex flex-col w-3/5 gap-20 md:gap-10 sm:gap-10 md:w-full sm:w-full">
+							<h1 className="tracking-widest md:tracking-wide leading-tight text-[50px] max-md:text-[40px] md:text-[40px] sm:text-2xl capitalize">
 								Let&apos;s talk about your project
 							</h1>
 							<Button className={"px-7"}>
@@ -21,17 +21,19 @@ function Footer() {
 							</Button>
 						</div>
 
-						<div className="flex flex-col gap-5">
-							<Button className={""}>
-								<div className="flex gap-5">
+						<div className="flex flex-col gap-5 sm:items-center">
+							<Button
+								className={`${theme === "dark" ? "dark-btn" : "light-btn"}`}
+							>
+								<div className="flex items-center justify-center gap-10 ">
 									<BsSun
-										className="cursor-pointer"
+										// size={20}
+										className="z-10 cursor-pointer"
 										onClick={() => setTheme("light")}
 									/>{" "}
 									<BsMoon
-										className={`${
-											theme === "dark" && "bg-purple"
-										} cursor-pointer`}
+										// size={20}
+										className={` cursor-pointer z-10`}
 										onClick={() => setTheme("dark")}
 									/>
 								</div>
@@ -44,11 +46,14 @@ function Footer() {
 						</div>
 					</div>
 
-					<div className="flex justify-end pr-20 sm:pr-0 pb-10">
+					<a
+						href="#home"
+						className="flex justify-end pb-10 pr-20 cursor-pointer md:pr-0 sm:pr-0"
+					>
 						<Button className={"px-[10px] py-2 rounded-full"}>
 							<BsArrowUp />
 						</Button>
-					</div>
+					</a>
 				</div>
 			</Button>
 		</section>

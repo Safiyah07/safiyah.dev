@@ -11,9 +11,9 @@ function Home() {
 	return (
 		<section
 			id="home"
-			className="h-svh flex flex-col items-center justify-center"
+			className="flex flex-col items-center justify-center h-svh"
 		>
-			<div className="lg:pl-40 w-full text-xl md:pb-10 sm:pb-10">
+			<div className="w-full text-xl lg:pl-40 md:pb-10 sm:pb-10">
 				<div className="flex flex-col gap-8">
 					<div className="tracking-widest leading-tight text-[80px] md:text-[60px] sm:text-[35px] lg:w-3/4">
 						<h1 className="flex gap-10 md:gap-3 sm:gap-4">
@@ -41,14 +41,14 @@ function Home() {
 					</p>
 					<a
 						href="mailto:safiyahmasud@gmail.com"
-						className="block w-fit mt-4 mb-6 lg:mb-0 max-md:mb-0"
+						className="block mt-4 mb-6 w-fit lg:mb-0 max-md:mb-0"
 					>
 						<Button>Get in touch</Button>
 					</a>
 				</div>
 			</div>
 
-			<div className="flex justify-center items-center animate-bounce">
+			<div className="flex items-center justify-center animate-bounce">
 				<BsChevronDoubleDown size={30} />
 			</div>
 		</section>
