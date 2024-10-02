@@ -1,12 +1,12 @@
-import Nanny from "../assets/Laptop.svg";
+import Nanny from "../../public/Laptop.svg";
+import HTML from "../../public/html.png";
+import CSS from "../../public/css.png";
+import Bootstrap from "../../public/bootstrap.png";
+import Tailwind from "../../public/tailwind.png";
+import Js from "../../public/js.png";
+import ReactJs from "../../public/reactjs.png";
+import NextJs from "../../public/next.png";
 import Button from "./../shared/Button";
-import HTML from "../assets/html.png";
-import CSS from "../assets/css.png";
-import Bootstrap from "../assets/bootstrap.png";
-import Tailwind from "../assets/tailwind.png";
-import Js from "../assets/js.png";
-import ReactJs from "../assets/reactjs.png";
-import NextJs from "../assets/next.png";
 
 function ProjectDisplay() {
 	const frontend = [
@@ -24,7 +24,7 @@ function ProjectDisplay() {
 
 	return (
 		<section className="pt-20 text-xl">
-			<div className="flex flex-col gap-10 px-16 py-10 bg-p1 shadow-light-3xl rounded-2xl md:px-10 sm:px-3">
+			<div className="flex flex-col gap-10 px-16 py-10 bg-nanny shadow-light-3xl rounded-2xl md:px-10 sm:px-3">
 				<div className="flex items-center justify-between">
 					<h1>Nanny App</h1>
 					<a
