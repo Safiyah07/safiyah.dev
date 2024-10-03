@@ -1,15 +1,31 @@
 import { Link } from "react-router-dom";
-import projects from "../data/projects.json";
 import Phone from "../../public/phone.png";
 import Button from "../shared/Button";
+import { useEffect, useState } from "react";
 
 function Projects() {
+	const [posts, setPosts] = useState([]);
+
+	useEffect(() => {
+		const proj = async () => {
+			try {
+				const response = await fetch("/data/projects.json");
+				const data = await response.json();
+				setPosts(data);
+			} catch (error) {
+				console.log(error);
+			}
+		};
+
+		proj();
+	}, []);
+
 	return (
 		<section id="projects">
 			<div className="text-xl lg:pl-40 lg:w-4/5">
 				<h1 className="pb-20 text-3xl sm:text-xl sm:pb-10">Case Studies</h1>
 				<div className="flex flex-col gap-10">
-					{projects.map((project) => (
+					{posts.map((project) => (
 						<div
 							key={project.id}
 							className={`${project.gradient} flex flex-col gap-10 px-16 py-10 shadow-light-3xl rounded-2xl md:px-10 sm:px-3`}
@@ -34,7 +50,7 @@ function Projects() {
 							<p>{project.previewP}</p>
 
 							<Button>
-								<Link to="/display">See Project</Link>
+								<Link to={`project/${project.name}`}>See Project</Link>
 							</Button>
 						</div>
 					))}

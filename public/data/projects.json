@@ -1,7 +1,7 @@
 [
 	{
 		"id": 1,
-		"name": "Nanny",
+		"name": "nanny",
 		"link": "https://nanny-9d0g.onrender.com/",
 		"mockup": ["/Laptop.svg", "/Laptop.svg", "/Laptop.svg"],
 		"gradient": "nanny",
@@ -12,13 +12,27 @@
 		"problem": "Finding a reliable and trustworthy nanny can be a daunting task for parents. Traditional methods often involve time-consuming searches and personal referrals, which may not always yield satisfactory results.",
 		"solution": "Streamline the process of finding a nanny by providing a user-friendly online platform.",
 		"features": [
-			"Easy Registration: I implemented an intuitive registration system that allows parents and nannies to create profiles and sign up effortlessly.",
-			"Intuitive Dashboard: Both parents and nannies have access to a well-organized dashboard for managing their profiles, searching for matches, and communicating.",
-			"Filter Search: Parents can use advanced filters to search for nannies based on location, experience, availability, and specific requirements, such as caring for children with special needs.",
-			"Comprehensive Nanny Profiles: Nanny profiles include detailed information about their qualifications, experience and availability.",
-			"Backend APIs: I developed and integrated several APIs to handle the core functionalities, including user authentication, nanny profiles, and search queries.",
-			"MongoDB Database: The app uses MongoDB to store user and nanny data, ensuring that all information is securely handled and easily accessible, ensuring scalability and flexibility.",
-			"Special Needs Accommodation: The platform offers options for parents to add detailed information about their child's special needs, helping them find nannies with the appropriate skills and experience and nannies are well-informed and prepared."
+			{
+				"list": "Easy Registration: I implemented an intuitive registration system that allows parents and nannies to create profiles and sign up effortlessly."
+			},
+			{
+				"list": "Intuitive Dashboard: Both parents and nannies have access to a well-organized dashboard for managing their profiles, searching for matches, and communicating."
+			},
+			{
+				"list": "Filter Search: Parents can use advanced filters to search for nannies based on location, experience, availability, and specific requirements, such as caring for children with special needs."
+			},
+			{
+				"list": "Comprehensive Nanny Profiles: Nanny profiles include detailed information about their qualifications, experience and availability."
+			},
+			{
+				"list": "Backend APIs: I developed and integrated several APIs to handle the core functionalities, including user authentication, nanny profiles, and search queries."
+			},
+			{
+				"list": "MongoDB Database: The app uses MongoDB to store user and nanny data, ensuring that all information is securely handled and easily accessible, ensuring scalability and flexibility."
+			},
+			{
+				"list": "Special Needs Accommodation: The platform offers options for parents to add detailed information about their child's special needs, helping them find nannies with the appropriate skills and experience and nannies are well-informed and prepared."
+			}
 		],
 		"stack": [
 			{ "name": "Tailwind CSS", "icon": "/tailwind.png" },
@@ -33,7 +47,7 @@
 	},
 	{
 		"id": 2,
-		"name": "Gisthub",
+		"name": "gisthub",
 		"link": "https://gisthub-seven.vercel.app/",
 		"mockup": ["/Laptop.svg", "/Laptop.svg", "/Laptop.svg"],
 		"gradient": "gisthub",
@@ -65,7 +79,7 @@
 	},
 	{
 		"id": 3,
-		"name": "Nanny",
+		"name": "hotdesk",
 		"link": "https://nanny-9d0g.onrender.com/",
 		"mockup": ["/Laptop.svg", "/Laptop.svg", "/Laptop.svg"],
 		"gradient": "gisthub",
@@ -97,7 +111,7 @@
 	},
 	{
 		"id": 4,
-		"name": "Nanny",
+		"name": "tyler",
 		"link": "https://nanny-9d0g.onrender.com/",
 		"mockup": ["/Laptop.svg", "/Laptop.svg", "/Laptop.svg"],
 		"gradient": "bg-nanny",
@@ -129,7 +143,7 @@
 	},
 	{
 		"id": 5,
-		"name": "Nanny",
+		"name": "house market",
 		"link": "https://nanny-9d0g.onrender.com/",
 		"mockup": ["/Laptop.svg", "/Laptop.svg", "/Laptop.svg"],
 		"gradient": "bg-nanny",

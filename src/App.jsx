@@ -30,7 +30,7 @@ function App() {
 				/>
 				{/* Dynamic route below */}
 				<Route
-					path="/display"
+					path="/project/:name"
 					element={<ProjectDisplay />}
 				/>
 			</Route>

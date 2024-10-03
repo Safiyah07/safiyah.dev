@@ -1,4 +1,5 @@
-import Nanny from "../../public/Laptop.svg";
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import HTML from "../../public/html.png";
 import CSS from "../../public/css.png";
 import Bootstrap from "../../public/bootstrap.png";
@@ -9,6 +10,29 @@ import NextJs from "../../public/next.png";
 import Button from "./../shared/Button";
 
 function ProjectDisplay() {
+	const { name } = useParams();
+
+	const [project, setProject] = useState(null);
+
+	useEffect(() => {
+		const proj = async () => {
+			try {
+				const response = await fetch("/data/projects.json");
+				const data = await response.json();
+				const currentProject = data.find((project) => project.name === name);
+				setProject(currentProject);
+			} catch (error) {
+				console.log(error);
+			}
+		};
+
+		proj();
+	}, [name]);
+
+	if (!project) {
+		return <div>Loading...</div>;
+	}
+
 	const frontend = [
 		{
 			name: "HTML",
@@ -24,11 +48,13 @@ function ProjectDisplay() {
 
 	return (
 		<section className="pt-20 text-xl">
-			<div className="flex flex-col gap-10 px-16 py-10 bg-nanny shadow-light-3xl rounded-2xl md:px-10 sm:px-3">
+			<div
+				className={`flex flex-col gap-10 px-16 py-10 ${project.gradient} shadow-light-3xl rounded-2xl md:px-10 sm:px-3`}
+			>
 				<div className="flex items-center justify-between">
-					<h1>Nanny App</h1>
+					<h1 className="capitalize">{project.name}</h1>
 					<a
-						href="https://nanny-9d0g.onrender.com/"
+						href={project.link}
 						target="_blank"
 						rel="noopener noreferrer"
 					>
@@ -38,7 +64,7 @@ function ProjectDisplay() {
 				{/* Mockup */}
 				<div className="flex flex-col items-center justify-center gap-10 m-auto w-fit">
 					<img
-						src={Nanny}
+						src={project.mockup[1]}
 						alt=""
 						className="object-cover sm:h-40"
 					/>
@@ -47,9 +73,9 @@ function ProjectDisplay() {
 
 				<div>
 					<div className="flex items-center justify-between mb-5">
-						<h1>Nanny Finder Project</h1>
+						<h1 className="capitalize">{project.desc}</h1>
 						<a
-							href="https://nanny-9d0g.onrender.com/"
+							href={project.link}
 							target="_blank"
 							rel="noopener noreferrer"
 							className="sm:hidden"
@@ -61,34 +87,26 @@ function ProjectDisplay() {
 					<div className="flex flex-col gap-5">
 						<div className="flex items-baseline gap-2">
 							<h1 className="mb-5 text-base">Role:</h1>
-							<p>Full-Stack Developer</p>
+							<p>{project.role}</p>
 						</div>
 
 						<div className="">
 							<h1 className="text-base">Problem:</h1>
 							<ul className="ml-6 list-disc">
-								<li>
-									Finding a reliable and trustworthy nanny can be a daunting
-									task for parents. Traditional methods often involve
-									time-consuming searches and personal referrals, which may not
-									always yield satisfactory results.
-								</li>
+								<li>{project.problem}</li>
 							</ul>
 						</div>
 						<div className="">
 							<h1 className="text-base">Solution:</h1>
 							<ul className="ml-6 list-disc">
-								<li>
-									Streamline the process of finding a nanny by providing a
-									user-friendly online platform.
-								</li>
+								<li>{project.solution}</li>
 							</ul>
 						</div>
 
 						{/* Mockup */}
 						<div className="flex flex-col items-center justify-center gap-10 m-auto my-20 w-fit">
 							<img
-								src={Nanny}
+								src={project.mockup[0]}
 								alt=""
 								className="object-cover sm:h-40"
 							/>
@@ -99,6 +117,7 @@ function ProjectDisplay() {
 						<div className="flex flex-col gap-2">
 							<h1 className="mb-5 text-base">Key features include:</h1>
 							<ul className="ml-6 list-disc">
+								{/* {project.features} */}
 								<li>
 									Easy Registration: I implemented an intuitive registration
 									system that allows parents and nannies to create profiles and
@@ -158,12 +177,7 @@ function ProjectDisplay() {
 						</div>
 
 						{/* Conclusion */}
-						<p>
-							The app delivers both performance and aesthetics. This project
-							reflects my focus on solving real-world problems by combining
-							clean design with robust, scalable code to create a seamless user
-							experience.
-						</p>
+						<p>{project.outro}</p>
 					</div>
 				</div>
 			</div>
