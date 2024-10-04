@@ -47,7 +47,7 @@ function Projects() {
 							</div>
 
 							<h1 className="sm:text-lg">{project.previewHeader}</h1>
-							<p>{project.previewP}</p>
+							{/* <p>{project.previewP}</p> */}
 
 							<Button>
 								<Link to={`project/${project.name}`}>See Project</Link>
