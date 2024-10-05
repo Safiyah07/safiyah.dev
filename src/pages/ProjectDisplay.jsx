@@ -1,12 +1,5 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import HTML from "../../public/html.png";
-import CSS from "../../public/css.png";
-import Bootstrap from "../../public/bootstrap.png";
-import Tailwind from "../../public/tailwind.png";
-import Js from "../../public/js.png";
-import ReactJs from "../../public/reactjs.png";
-import NextJs from "../../public/next.png";
 import Button from "./../shared/Button";
 
 function ProjectDisplay() {
@@ -32,19 +25,6 @@ function ProjectDisplay() {
 	if (!project) {
 		return <div>Loading...</div>;
 	}
-
-	const frontend = [
-		{
-			name: "HTML",
-			icon: HTML,
-		},
-		{ name: "CSS", icon: CSS },
-		{ name: "Tailwind CSS", icon: Tailwind },
-		{ name: "Bootstrap", icon: Bootstrap },
-		{ name: "Javascript", icon: Js },
-		{ name: "React Js", icon: ReactJs },
-		{ name: "Next Js", icon: NextJs },
-	];
 
 	return (
 		<section className="pt-20 text-xl">
@@ -160,7 +140,7 @@ function ProjectDisplay() {
 						<div className="">
 							<h1 className="mb-5 text-base">Tech Stack:</h1>
 							<div className="grid w-full grid-cols-4 md:grid-cols-3 sm:grid-cols-2">
-								{frontend.map((item, id) => (
+								{project.stack.map((item, id) => (
 									<div
 										key={id}
 										className="flex items-center justify-center w-40 gap-3 py-2 mb-5 border rounded-full sm:gap-2 sm:w-36"
