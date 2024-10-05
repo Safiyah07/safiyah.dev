@@ -32,7 +32,7 @@ function ProjectDisplay() {
 				className={`flex flex-col gap-10 px-16 py-10 ${project.gradient} shadow-light-3xl rounded-2xl md:px-10 sm:px-3`}
 			>
 				<div className="flex items-center justify-between">
-					<h1 className="capitalize">{project.name}</h1>
+					<h1 className="capitalize text-[17px]">{project.name}</h1>
 					<a
 						href={project.link}
 						target="_blank"
