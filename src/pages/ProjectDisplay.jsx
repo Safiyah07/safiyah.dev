@@ -88,7 +88,7 @@ function ProjectDisplay() {
 							<img
 								src={project.mockup[2]}
 								alt=""
-								className="object-cover sm:h-40"
+								className="object-cover"
 							/>
 							<div className="w-full h-[15px] bg-shadow opacity-50 rounded-[100%] blur-[10px]"></div>
 						</div>
@@ -97,42 +97,9 @@ function ProjectDisplay() {
 						<div className="flex flex-col gap-2">
 							<h1 className="mb-5 text-base">Key features include:</h1>
 							<ul className="ml-6 list-disc">
-								{/* {project.features} */}
-								<li>
-									Easy Registration: I implemented an intuitive registration
-									system that allows parents and nannies to create profiles and
-									sign up effortlessly.
-								</li>
-								<li>
-									Intuitive Dashboard: Both parents and nannies have access to a
-									well-organized dashboard for managing their profiles,
-									searching for matches, and communicating.
-								</li>
-								<li>
-									Filter Search: Parents can use advanced filters to search for
-									nannies based on location, experience, availability, and
-									specific requirements, such as caring for children with
-									special needs. Comprehensive Nanny Profiles: Nanny profiles
-									include detailed information about their qualifications,
-									experience and availability.
-								</li>
-								<li>
-									Backend APIs: I developed and integrated several APIs to
-									handle the core functionalities, including user
-									authentication, nanny profiles, and search queries.
-								</li>
-								<li>
-									MongoDB Database: The app uses MongoDB to store user and nanny
-									data, ensuring that all information is securely handled and
-									easily accessible, ensuring scalability and flexibility.
-								</li>
-								<li>
-									Special Needs Accommodation: The platform offers options for
-									parents to add detailed information about their child’s
-									special needs, helping them find nannies with the appropriate
-									skills and experience and nannies are well-informed and
-									prepared.
-								</li>
+								{project.features.map((list, id) => (
+									<li key={id}>{list.list}</li>
+								))}
 							</ul>
 						</div>
 
