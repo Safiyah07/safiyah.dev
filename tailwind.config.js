@@ -20,6 +20,7 @@ export default {
 				green: "#bdff68",
 				purple: "#e066ff",
 				shadow: "#696969",
+				hotdesk: "#9492F0",
 			},
 			boxShadow: {
 				"3xl": "0px 3px 2px 0px rgba(35, 35, 35, 0.5)",

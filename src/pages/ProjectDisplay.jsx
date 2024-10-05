@@ -106,7 +106,7 @@ function ProjectDisplay() {
 						{/* Mockup */}
 						<div className="flex flex-col items-center justify-center gap-10 m-auto my-20 w-fit">
 							<img
-								src={project.mockup[0]}
+								src={project.mockup[2]}
 								alt=""
 								className="object-cover sm:h-40"
 							/>

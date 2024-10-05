@@ -28,10 +28,10 @@ function Projects() {
 					{posts.map((project) => (
 						<div
 							key={project.id}
-							className={`${project.gradient} flex flex-col gap-10 px-16 py-10 shadow-light-3xl rounded-2xl md:px-10 sm:px-3`}
+							className={`${project.gradient} flex flex-col gap-10 px-16 py-20 shadow-light-3xl rounded-2xl md:px-10 sm:px-3`}
 						>
 							<div className="flex flex-col self-center gap-10 w-max">
-								<div className="flex items-center justify-center">
+								<div className="flex items-center justify-center w-[600px] mt-10">
 									<img
 										src={Phone}
 										alt=""
