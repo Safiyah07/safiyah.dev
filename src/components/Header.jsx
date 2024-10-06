@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import Button from "../shared/Button";
-import { useLocation } from "react-router-dom";
 import ThemeContext from "../context/ThemeContext";
 
 function Header() {
@@ -44,9 +44,9 @@ function Header() {
 		>
 			<div className="w-full font-normal h-0">
 				<div className="flex items-center justify-between">
-					<a href="/">
+					<Link to="/">
 						<h1 className="text-xl font-medium tracking-wider">Safiyah</h1>
-					</a>
+					</Link>
 					{/* Desktop menu */}
 					<div className="relative flex items-center w-auto h-full gap-16 text-xl md:hidden sm:hidden">
 						{nav.map((item, id) => (
@@ -61,7 +61,7 @@ function Header() {
 							</a>
 						))}
 						<Button>
-							<a href="mailto:safiyahmasud@gmail.com">Get in touch</a>
+							<Link to="mailto:safiyahmasud@gmail.com">Get in touch</Link>
 						</Button>
 					</div>
 
@@ -94,7 +94,7 @@ function Header() {
 						</a>
 					))}
 					<Button>
-						<a href="mailto:safiyahmasud@gmail.com">Get in touch</a>
+						<Link to="mailto:safiyahmasud@gmail.com">Get in touch</Link>
 					</Button>
 				</div>
 			</div>

@@ -47,7 +47,7 @@ function Footer() {
 					</div>
 
 					<a
-						href="#home"
+						href="#top"
 						className="flex justify-end pb-10 pr-20 cursor-pointer md:pr-0 sm:pr-0"
 					>
 						<Button className={"px-[10px] py-2 rounded-full"}>
