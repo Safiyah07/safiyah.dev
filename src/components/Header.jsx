@@ -37,7 +37,6 @@ function Header() {
 
 	return (
 		<section
-			id="top"
 			className={`${
 				theme === "light" ? "bg-light" : "bg-dark"
 			} fixed top-0 pt-5 pb-16 pr-20 m-auto md:pr-10 sm:pr-5 wid z-50 h-14`}

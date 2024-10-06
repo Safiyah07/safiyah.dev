@@ -10,10 +10,10 @@ function Footer() {
 	return (
 		<section className="pt-20 text-2xl">
 			<Button>
-				<div>
+				<div className="relative">
 					<div className="flex justify-between gap-20 px-16 py-20 md:px-5 sm:px-5 md:flex-col sm:flex-col md:gap-10 sm:gap-10">
 						<div className="flex flex-col w-3/5 gap-20 md:gap-10 sm:gap-10 md:w-full sm:w-full">
-							<h1 className="tracking-widest md:tracking-wide leading-tight text-[50px] max-md:text-[40px] md:text-[40px] sm:text-2xl capitalize">
+							<h1 className="tracking-widest md:tracking-wide leading-snug text-[50px] max-md:text-[40px] md:text-[40px] sm:text-2xl capitalize">
 								Let&apos;s talk about your project
 							</h1>
 							<Button className={"px-7"}>
@@ -21,7 +21,7 @@ function Footer() {
 							</Button>
 						</div>
 
-						<div className="flex flex-col gap-5 md:flex-col-reverse sm:flex-col-reverse">
+						<div className="flex flex-col gap-10 md:flex-col-reverse sm:flex-col-reverse">
 							<Button
 								className={`${theme === "dark" ? "dark-btn" : "light-btn"}`}
 							>
@@ -62,14 +62,16 @@ function Footer() {
 						</div>
 					</div>
 
-					<a
-						href="#top"
-						className="flex justify-end pb-10 pr-20 cursor-pointer md:pr-0 sm:pr-0"
-					>
+					<div className="realtive right-0">
 						<Button className={"px-[10px] py-2 rounded-full"}>
-							<BsArrowUp />
+							<a
+								href="#top"
+								className="cursor-pointer md:pr-0 sm:pr-0"
+							>
+								<BsArrowUp />
+							</a>
 						</Button>
-					</a>
+					</div>
 				</div>
 			</Button>
 		</section>
