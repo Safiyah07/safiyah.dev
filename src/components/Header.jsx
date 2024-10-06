@@ -17,10 +17,10 @@ function Header() {
 			name: "home",
 			link: "",
 		},
-		{
-			name: "projects",
-			link: "projects",
-		},
+		// {
+		// 	name: "projects",
+		// 	link: "projects",
+		// },
 		{
 			name: "about",
 			link: "about",
