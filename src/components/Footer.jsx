@@ -12,7 +12,7 @@ function Footer() {
 			<Button>
 				<div>
 					<div className="flex justify-between gap-20 px-16 py-20 md:px-5 sm:px-5 md:flex-col sm:flex-col md:gap-10 sm:gap-10">
-						<div className="flex flex-col w-3/5 gap-20 md:gap-10 sm:gap-10 md:w-full sm:w-full">
+						<div className="flex flex-col w-3/5 gap-20 md:gap-10 sm:gap-10 md:w-full sm:w-full sm:text-center sm:items-center">
 							<h1 className="tracking-widest md:tracking-wide leading-tight text-[50px] max-md:text-[40px] md:text-[40px] sm:text-2xl capitalize">
 								Let&apos;s talk about your project
 							</h1>
@@ -21,7 +21,7 @@ function Footer() {
 							</Button>
 						</div>
 
-						<div className="flex flex-col gap-5 sm:items-center">
+						<div className="flex flex-col gap-5 sm:items-center sm:flex-col-reverse">
 							<Button
 								className={`${theme === "dark" ? "dark-btn" : "light-btn"}`}
 							>

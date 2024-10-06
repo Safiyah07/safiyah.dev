@@ -18,11 +18,13 @@ function Projects() {
 		};
 
 		proj();
+
+		window.scrollTo(0, 0);
 	}, []);
 
 	return (
 		<section id="projects">
-			<div className="text-xl lg:pl-40 lg:w-4/5">
+			<div className="text-xl lg:pl-40 lg:w-4/5 pt-32">
 				<h1 className="pb-20 text-3xl sm:text-xl sm:pb-10">Case Studies</h1>
 				<div className="flex flex-col gap-10">
 					{posts.map((project) => (
@@ -52,7 +54,7 @@ function Projects() {
 							<p>{project.previewP}</p>
 
 							<Button>
-								<Link to={`project/${project.name}`}>See Project</Link>
+								<Link to={`/project/${project.name}`}>See Project</Link>
 							</Button>
 						</div>
 					))}

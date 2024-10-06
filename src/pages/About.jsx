@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import HTML from "../../public/html.png";
 import CSS from "../../public/css.png";
 import Bootstrap from "../../public/bootstrap.png";
@@ -16,6 +17,10 @@ import Chat from "../assets/chat.svg";
 import Button from "../shared/Button";
 
 function About() {
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	}, []);
+
 	const frontend = [
 		{
 			name: "HTML",

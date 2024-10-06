@@ -4,11 +4,6 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
-	scroll-behavior: smooth;
-	will-change: scroll-position;
-}
-
 body {
 	font-family: "Darker Grotesque", sans-serif;
 }

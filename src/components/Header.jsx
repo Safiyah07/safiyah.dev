@@ -30,7 +30,7 @@ function Header() {
 	const location = useLocation();
 
 	const pathMatchRoute = (route) => {
-		if (route === location.hash) {
+		if (route === location.pathname) {
 			return true;
 		}
 	};
@@ -50,18 +50,18 @@ function Header() {
 					{/* Desktop menu */}
 					<div className="relative flex items-center w-auto h-full gap-16 text-xl md:hidden sm:hidden">
 						{nav.map((item, id) => (
-							<a
+							<Link
 								key={id}
-								href={`/${item.link}`}
+								to={`/${item.link}`}
 								className={`${
-									pathMatchRoute(`${item.link}`) && " font-medium"
+									pathMatchRoute(`/${item.link}`) && " font-medium"
 								} capitalize hover:font-medium transition-all ease-in-out duration-300`}
 							>
 								{item.name}
-							</a>
+							</Link>
 						))}
 						<Button>
-							<Link to="mailto:safiyahmasud@gmail.com">Get in touch</Link>
+							<a href="mailto:safiyahmasud@gmail.com">Get in touch</a>
 						</Button>
 					</div>
 
@@ -81,20 +81,21 @@ function Header() {
 					} flex flex-col items-center justify-center gap-16 h-svh rounded-xl p-5 sm:my-0 sm:p-0 sm:h-svh ${
 						theme === "dark" ? "bg-dark" : "bg-light"
 					} text-2xl lg:hidden max-md:hidden transition-all ease-in-out duration-500 relative z-10`}
+					onClick={() => setShowMenu(true)}
 				>
 					{nav.map((item, id) => (
-						<a
+						<Link
 							key={id}
-							href={`/${item.name}`}
+							to={`/${item.link}`}
 							className={`${
-								pathMatchRoute(`#${item.name}`) && " font-semibold"
+								pathMatchRoute(`/${item.link}`) && " font-semibold"
 							} capitalize hover:font-medium transition-all ease-in-out duration-300`}
 						>
 							{item.name}
-						</a>
+						</Link>
 					))}
 					<Button>
-						<Link to="mailto:safiyahmasud@gmail.com">Get in touch</Link>
+						<a href="mailto:safiyahmasud@gmail.com">Get in touch</a>
 					</Button>
 				</div>
 			</div>

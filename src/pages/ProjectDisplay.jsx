@@ -20,6 +20,8 @@ function ProjectDisplay() {
 		};
 
 		proj();
+
+		window.scrollTo(0, 0);
 	}, [name]);
 
 	if (!project) {
@@ -46,7 +48,7 @@ function ProjectDisplay() {
 					<img
 						src={project.mockup[1]}
 						alt=""
-						className="object-cover sm:h-40"
+						className="object-cover h-96 sm:h-40"
 					/>
 					<div className="w-full h-[15px] bg-shadow opacity-50 rounded-[100%] blur-[10px]"></div>
 				</div>
@@ -88,7 +90,7 @@ function ProjectDisplay() {
 							<img
 								src={project.mockup[2]}
 								alt=""
-								className="object-cover"
+								className="object-cover h-[500px]"
 							/>
 							<div className="w-full h-[15px] bg-shadow opacity-50 rounded-[100%] blur-[10px]"></div>
 						</div>
