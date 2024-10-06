@@ -1,5 +1,5 @@
 import HomePage from "../components/Home";
-import Projects from "../components/Projects";
+import Projects from "../pages/Projects";
 
 function Home() {
 	return (

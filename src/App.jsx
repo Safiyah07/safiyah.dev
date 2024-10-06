@@ -10,6 +10,7 @@ import ThemeContext, { ThemeProvider } from "./context/ThemeContext";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
+import Projects from "./pages/Projects";
 import About from "./pages/About";
 import ProjectDisplay from "./pages/ProjectDisplay";
 
@@ -23,6 +24,10 @@ function App() {
 				<Route
 					element={<Home />}
 					index
+				/>
+				<Route
+					path="/projects"
+					element={<Projects />}
 				/>
 				<Route
 					path="/about"
