@@ -43,7 +43,10 @@ function Header() {
 		>
 			<div className="w-full font-normal h-0">
 				<div className="flex items-center justify-between">
-					<Link to="/">
+					<Link
+						to="/"
+						onClick={() => setShowMenu(true)}
+					>
 						<h1 className="text-xl font-medium tracking-wider">Safiyah</h1>
 					</Link>
 					{/* Desktop menu */}
