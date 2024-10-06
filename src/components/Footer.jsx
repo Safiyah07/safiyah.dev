@@ -21,11 +21,13 @@ function Footer() {
 							</Button>
 						</div>
 
-						<div className="flex flex-col gap-10 md:flex-col-reverse sm:flex-col-reverse">
+						<div className="flex flex-col lg:gap-10 max-md:gap-8 gap-5 lg:items-end max-md:items-end">
 							<Button
-								className={`${theme === "dark" ? "dark-btn" : "light-btn"}`}
+								className={`${
+									theme === "dark" ? "dark-btn" : "light-btn"
+								} px-5 md:px-3 sm:px-3`}
 							>
-								<div className="flex items-center justify-center gap-10 ">
+								<div className="flex items-center justify-center gap-6 lg:gap-8 max-md:gap-8">
 									<BsSun
 										// size={20}
 										className="z-10 cursor-pointer"
@@ -62,16 +64,14 @@ function Footer() {
 						</div>
 					</div>
 
-					<div className="realtive right-0">
+					<a
+						href="#top"
+						className="flex justify-end cursor-pointer pr-12 md:pr-0 sm:pr-0"
+					>
 						<Button className={"px-[10px] py-2 rounded-full"}>
-							<a
-								href="#top"
-								className="cursor-pointer md:pr-0 sm:pr-0"
-							>
-								<BsArrowUp />
-							</a>
+							<BsArrowUp />
 						</Button>
-					</div>
+					</a>
 				</div>
 			</Button>
 		</section>
