@@ -41,7 +41,9 @@ function Footer() {
 								</div>
 							</Button>
 							<Link
-								to={"/about"}
+								to={
+									"https://drive.google.com/file/d/1T9xxlLCHd7nYBAlfb8ClwIqFSxk9F0I5/view"
+								}
 								target="_blank"
 								rel="noopener noreferrer"
 							>
