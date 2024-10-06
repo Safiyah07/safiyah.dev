@@ -34,7 +34,7 @@ function ProjectDisplay() {
 				className={`flex flex-col gap-10 px-16 py-10 ${project.gradient} shadow-light-3xl rounded-2xl md:px-10 sm:px-3`}
 			>
 				<div className="flex items-center justify-between">
-					<h1 className="capitalize text-[17px]">{project.name}</h1>
+					<h1 className="capitalize">{project.name}</h1>
 					<a
 						href={project.link}
 						target="_blank"
@@ -48,7 +48,7 @@ function ProjectDisplay() {
 					<img
 						src={project.mockup[1]}
 						alt=""
-						className="object-cover h-96 sm:h-40"
+						className="object-cover lg:h-96 max-md:h-96 sm:h-40"
 					/>
 					<div className="w-full h-[15px] bg-shadow opacity-50 rounded-[100%] blur-[10px]"></div>
 				</div>
@@ -90,7 +90,7 @@ function ProjectDisplay() {
 							<img
 								src={project.mockup[2]}
 								alt=""
-								className="object-cover h-[500px]"
+								className="object-cover lg:h-[500px] max-md:h-[500px]"
 							/>
 							<div className="w-full h-[15px] bg-shadow opacity-50 rounded-[100%] blur-[10px]"></div>
 						</div>

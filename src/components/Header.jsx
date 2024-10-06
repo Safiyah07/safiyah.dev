@@ -68,7 +68,7 @@ function Header() {
 					{/* md and sm menu btn */}
 					<div
 						onClick={menuDisplay}
-						className="font-normal text-xl cursor-pointer lg:hidden max-md:hidden"
+						className="font-normal cursor-pointer lg:hidden max-md:hidden"
 					>
 						<Button>{showMenu ? <div>Menu</div> : <div>Close</div>}</Button>
 					</div>

@@ -21,7 +21,7 @@ function Footer() {
 							</Button>
 						</div>
 
-						<div className="flex flex-col gap-5 sm:items-center sm:flex-col-reverse">
+						<div className="flex flex-col gap-5 md:flex-col-reverse sm:flex-col-reverse">
 							<Button
 								className={`${theme === "dark" ? "dark-btn" : "light-btn"}`}
 							>
@@ -38,11 +38,27 @@ function Footer() {
 									/>
 								</div>
 							</Button>
-							<Link to={"/about"}>CV</Link>
-							<Link to={"https://www.linkedin.com/in/safiyah-amedu-9424b6230/"}>
+							<Link
+								to={"/about"}
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								CV
+							</Link>
+							<Link
+								to={"https://www.linkedin.com/in/safiyah-amedu-9424b6230/"}
+								target="_blank"
+								rel="noopener noreferrer"
+							>
 								LinkedIn
 							</Link>
-							<Link to={"https://twitter.com/Sa_fi_yah"}>Twitter/X</Link>
+							<Link
+								to={"https://twitter.com/Sa_fi_yah"}
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								Twitter/X
+							</Link>
 						</div>
 					</div>
 

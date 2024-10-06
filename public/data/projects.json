@@ -92,10 +92,10 @@
 		"gradient": "gisthub",
 		"previewHeader": "Bridging the Information Gap Between AEDC, Water Board and Nigerian Citizens",
 		"previewP": "GistHub is a platform designed to address the communication gap between the Abuja Electricity Distribution Company (AEDC), the Water Board, and the citizens of Nigeria. Through a centralized blog, it ensures that citizens stay informed about electricity and water supply updates, scheduled maintenance, and other essential services.",
-		"desc": "gisthub project",
+		"desc": "gisthub blog",
 		"role": "Full-stack developer",
 		"problem": "Citizens in Nigeria often face a lack of timely and accurate information regarding electricity and water services. There is minimal communication from AEDC and the Water Board, leaving residents unaware of important updates, such as outages, scheduled maintenance, or water supply issues. This information gap creates confusion and frustration for those affected.",
-		"solution": "GistHub provides a solution by creating a platform where citizens can access real-time updates from AEDC and the Water Board. The blog format allows users to stay informed about service interruptions, planned maintenance, and general updates. By streamlining communication, GistHub helps citizens stay prepared and informed, reducing the impact of unexpected outages and service disruptions.",
+		"solution": "Creating a platform where citizens can access real-time updates from AEDC and the Water Board. The blog format allows users to stay informed about service interruptions, planned maintenance, and general updates. By streamlining communication, GistHub helps citizens stay prepared and informed, reducing the impact of unexpected outages and service disruptions.",
 		"features": [
 			{
 				"list": "Real-time Updates: Stay informed with the latest information from AEDC and the Water Board."
