@@ -97,9 +97,7 @@ function About() {
 								<li>Build responsive and interactive UIs.</li>
 								<li>Develop dynamic apps.</li>
 								<li>Implement website and web app designs.</li>
-								<li>
-									Implement style using Bootstrap / Tailwind CSS(Daisy UI).
-								</li>
+								<li>Implement style using Bootstrap / Tailwind CSS.</li>
 							</ul>
 						</div>
 

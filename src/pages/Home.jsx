@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import HomePage from "../components/Home";
-import Projects from "../pages/Projects";
+import Projects from "../components/Projects";
 
 function Home() {
 	useEffect(() => {
