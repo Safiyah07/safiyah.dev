@@ -50,7 +50,7 @@ function Footer() {
 								CV
 							</Link>
 							<Link
-								to={"www.linkedin.com/in/safiyah-amedu-841229370"}
+								to={"https://www.linkedin.com/in/safiyah-amedu-841229370/
 								target="_blank"
 								rel="noopener noreferrer"
 							>
