@@ -42,7 +42,7 @@ function Footer() {
 							</Button>
 							<Link
 								to={
-									"https://drive.google.com/file/d/1T9xxlLCHd7nYBAlfb8ClwIqFSxk9F0I5/view"
+									"https://drive.google.com/file/d/19_hjQaJjxMsmRn2VhfqwIqakjaJHkU-U/view"
 								}
 								target="_blank"
 								rel="noopener noreferrer"
@@ -56,13 +56,16 @@ function Footer() {
 							>
 								LinkedIn
 							</Link>
-							<Link
+							<a href="tel:+2348147143736">
+								+234 814 714 3736
+							</a>
+							{/* <Link
 								to={"https://twitter.com/Sa_fi_yah"}
 								target="_blank"
 								rel="noopener noreferrer"
 							>
 								Twitter/X
-							</Link>
+							</Link> */}
 						</div>
 					</div>
 
