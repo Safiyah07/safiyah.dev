@@ -153,11 +153,11 @@ function About() {
 									key={id}
 									className="flex items-center justify-center w-40 gap-3 py-2 mb-5 border rounded-full sm:gap-2 sm:w-36"
 								>
-									<img
+									{/* <img
 										src={item.icon}
 										className="w-5"
 										alt=""
-									/>
+									/> */}
 									<p>{item.name}</p>
 								</div>
 							))}
