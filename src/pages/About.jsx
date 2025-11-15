@@ -32,15 +32,19 @@ function About() {
 		{ name: "Javascript", icon: Js },
 		{ name: "React Js", icon: ReactJs },
 		{ name: "Next Js", icon: NextJs },
+		{ name: "Angular Js", icon: NextJs },
 	];
 
 	const backend = [
 		{ name: "Node Js", icon: NodeJs },
 		{ name: "Express Js", icon: Express },
+		{ name: "Prisma ORM", icon: NextJs },
 	];
 
 	const db = [
 		{ name: "MongoDB", icon: Mongodb },
+		{ name: "PostgreSQL", icon: NextJs },
+		{ name: "MySQL2", icon: NextJs },
 		{ name: "Contentful", icon: Contentful },
 		{ name: "Firebase", icon: Firebase },
 	];
@@ -48,6 +52,7 @@ function About() {
 	const aSkills = [
 		{ name: "Figma", icon: Figma },
 		{ name: "PhotoPea", icon: Photopea },
+		{ name: "Swagger", icon: NextJs },
 	];
 
 	return (
@@ -128,11 +133,11 @@ function About() {
 									key={id}
 									className="flex items-center justify-center w-40 gap-3 py-2 mb-5 border rounded-full sm:gap-2 sm:w-36"
 								>
-									<img
+									{/* <img
 										src={item.icon}
 										className="w-5"
 										alt=""
-									/>
+									/> */}
 									<p>{item.name}</p>
 								</div>
 							))}
@@ -168,11 +173,11 @@ function About() {
 									key={id}
 									className="flex items-center justify-center w-40 gap-3 py-2 mb-5 border rounded-full sm:gap-2 sm:w-36"
 								>
-									<img
+									{/* <img
 										src={item.icon}
 										className="w-5"
 										alt=""
-									/>
+									/> */}
 									<p>{item.name}</p>
 								</div>
 							))}
@@ -188,11 +193,11 @@ function About() {
 									key={id}
 									className="flex items-center justify-center w-40 gap-3 py-2 mb-5 border rounded-full sm:gap-2 sm:w-36"
 								>
-									<img
+									{/* <img
 										src={item.icon}
 										alt=""
 										className="w-5"
-									/>
+									/> */}
 									<p>{item.name}</p>
 								</div>
 							))}
