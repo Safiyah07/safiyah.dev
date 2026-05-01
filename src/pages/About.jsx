@@ -335,7 +335,7 @@ function About() {
 
       {/* Decorative dots — right side, wide screens only */}
       <div
-        className="absolute top-0 bottom-0 pointer-events-none  overflow-hidden"
+        className="absolute top-0 bottom-0 pointer-events-none sm:hidden overflow-hidden"
         style={{ right: "min(8rem, 100%)", width: "250px" }}
         aria-hidden="true"
       >
