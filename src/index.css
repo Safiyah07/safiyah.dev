@@ -26,6 +26,7 @@ h4 {
 	--text-secondary: #3d3d5c;
 	--text-muted: #6b6b8a;
 	--text-faint: #9999aa;
+	--green: #3d7200;
 }
 
 .dark-theme {
@@ -33,6 +34,7 @@ h4 {
 	--text-secondary: rgba(232, 228, 240, 0.75);
 	--text-muted: rgba(232, 228, 240, 0.5);
 	--text-faint: rgba(232, 228, 240, 0.3);
+	--green: #bdff68;
 }
 
 /* Hide system cursor on pointer devices */
@@ -194,14 +196,26 @@ h4 {
 	transition: none;
 }
 
+/* === Header / hero CTA button hover === */
+.header-cta {
+	border: 1px solid var(--text-muted);
+	color: var(--text-secondary);
+	transition: background 0.3s, color 0.3s, border-color 0.3s, gap 0.3s;
+}
+.header-cta:hover {
+	background: var(--green);
+	color: #0b1215;
+	border-color: var(--green);
+}
+
 /* === Custom scrollbar === */
 ::-webkit-scrollbar {
 	width: 3px;
 }
 ::-webkit-scrollbar-track {
-	background: #0b1215;
+	background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-	background: #bdff68;
+	background: var(--green);
 	border-radius: 2px;
 }

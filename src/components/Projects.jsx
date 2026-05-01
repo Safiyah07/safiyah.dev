@@ -166,7 +166,7 @@ function Projects() {
       </div>
 
       {/* Project list */}
-      <div ref={listRef}>
+      <div ref={listRef} onMouseLeave={hidePreview}>
         {projects.map((project, i) => {
           const accent = ACCENT_COLORS[project.name] || "#bdff68";
           const isActive = activeIndex === project.id;
@@ -180,7 +180,6 @@ function Projects() {
                 borderTopOpacity: 0.3,
               }}
               onMouseEnter={() => showPreview(project)}
-              onMouseLeave={hidePreview}
             >
               {/* Hover fill */}
               <div

@@ -38,9 +38,6 @@ function HomeHero() {
     return () => ctx.revert();
   }, [loaded]);
 
-  const date = new Date();
-  const currentYear = date.getFullYear();
-
   return (
     <section
       ref={heroRef}
@@ -54,12 +51,18 @@ function HomeHero() {
         >
           Full-Stack Developer
         </span>
-        <span
-          className="text-xs tracking-[0.3em] uppercase font-grotesque"
-          style={{ color: "var(--text-faint)" }}
-        >
-          {currentYear}
-        </span>
+        <div className="flex items-center gap-2">
+          <span
+            className="w-1.5 h-1.5 rounded-full flex-shrink-0 animate-pulse"
+            style={{ background: "var(--green)" }}
+          />
+          <span
+            className="text-xs tracking-[0.3em] uppercase font-grotesque"
+            style={{ color: "var(--green)" }}
+          >
+            Available for work
+          </span>
+        </div>
       </div>
 
       {/* Display heading */}
@@ -91,15 +94,15 @@ function HomeHero() {
           className="hero-sub text-xl sm:text-lg font-grotesque leading-relaxed max-w-md"
           style={{ color: "var(--text-secondary)" }}
         >
-          Hi, I&apos;m Safiyah — building digital products that are as
+          Hi, I&apos;m Safiyah 👋, I build digital products that are as
           performant as they are beautiful.
         </p>
         <a
           href="#contact"
           className="hero-sub flex-shrink-0 inline-flex items-center gap-3 text-xs tracking-[0.25em] uppercase px-7 py-3.5 rounded-full font-grotesque transition-all duration-300 hover:gap-5"
           style={{
-            border: "1px solid #bdff68",
-            color: "#bdff68",
+            border: "1px solid var(--green)",
+            color: "var(--green)",
           }}
         >
           Get in touch <span>↗</span>

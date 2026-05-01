@@ -25,7 +25,7 @@
       { "name": "React Js", "icon": "/reactjs.png" },
       { "name": "Node Js", "icon": "/node.png" },
       { "name": "Express Js", "icon": "/express.png" },
-      { "name": "MongoDB", "icon": "/mongodb.png" },
+      { "name": "Supabase", "icon": "/supabase.png" },
       { "name": "Tailwind CSS", "icon": "/tailwind.png" }
     ],
     "outro": "BookTalk bridges the gap between reading alone and reading together, making the entire experience more intelligent, personal, and social."
@@ -53,8 +53,10 @@
     ],
     "stack": [
       { "name": "React Js", "icon": "/reactjs.png" },
+      { "name": "Tailwind CSS", "icon": "/tailwind.png" },
       { "name": "Node Js", "icon": "/node.png" },
-      { "name": "Tailwind CSS", "icon": "/tailwind.png" }
+      { "name": "Express Js", "icon": "/express.png" },
+      { "name": "Supabase", "icon": "/supabase.png" }
     ],
     "outro": "GetALead turns the most tedious part of freelancing into an automated background process, giving developers their time and focus back."
   },

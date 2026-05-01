@@ -55,7 +55,7 @@ function Header() {
 							className="text-xs tracking-[0.25em] uppercase font-grotesque transition-all duration-300"
 							style={{
 								color: location.pathname === item.link
-									? "#bdff68"
+									? "var(--green)"
 									: "var(--text-muted)",
 							}}
 						>
@@ -72,11 +72,7 @@ function Header() {
 					</button>
 					<a
 						href="#contact"
-						className="text-xs tracking-[0.25em] uppercase px-5 py-2 rounded-full font-grotesque transition-all duration-300 hover:bg-green hover:text-dark"
-						style={{
-							border: "1px solid var(--text-muted)",
-							color: "var(--text-secondary)",
-						}}
+						className="header-cta text-xs tracking-[0.25em] uppercase px-5 py-2 rounded-full font-grotesque"
 					>
 						Get in touch
 					</a>
@@ -119,7 +115,7 @@ function Header() {
 				<a
 					href="#contact"
 					className="mt-4 text-xs tracking-[0.3em] uppercase px-8 py-3 rounded-full font-grotesque"
-					style={{ border: "1px solid #bdff68", color: "#bdff68" }}
+					style={{ border: "1px solid var(--green)", color: "var(--green)" }}
 				>
 					Get in touch
 				</a>

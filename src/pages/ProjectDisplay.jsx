@@ -29,7 +29,6 @@ function ProjectDisplay() {
 			.then((r) => r.json())
 			.then((data) => setProject(data.find((p) => p.name === name)))
 			.catch(console.error);
-		window.scrollTo(0, 0);
 	}, [name]);
 
 	useEffect(() => {
