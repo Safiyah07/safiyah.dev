@@ -1,122 +1,170 @@
 [
-	{
-		"id": 1,
-		"name": "nanny",
-		"link": "https://nanny-9d0g.onrender.com/",
-		"mockup": ["/nanny-laptop.png", "/nanny-laptop.png", "/nanny-families.png"],
-		"gradient": "nanny",
-		"previewHeader": "Designed to bridge the gap between parents and nannies.",
-		"previewP": "I developed both the frontend and backend of a web app that simplifies the process of finding the right nanny. The platform offers intuitive search features and seamless functionality to connect parents with suitable nannies efficiently.",
-		"desc": "nanny finder project",
-		"role": "Full-stack developer",
-		"problem": "Finding a reliable and trustworthy nanny can be a daunting task for parents. Traditional methods often involve time-consuming searches and personal referrals, which may not always yield satisfactory results.",
-		"solution": "Streamline the process of finding a nanny by providing a user-friendly online platform.",
-		"features": [
-			{
-				"list": "Easy Registration: I implemented an intuitive registration system that allows parents and nannies to create profiles and sign up effortlessly."
-			},
-			{
-				"list": "Intuitive Dashboard: Both parents and nannies have access to a well-organized dashboard for managing their profiles, searching for matches, and communicating."
-			},
-			{
-				"list": "Filter Search: Parents can use advanced filters to search for nannies based on location."
-			},
-			{
-				"list": "Comprehensive Nanny Profiles: Nanny profiles include detailed information about their qualifications, experience and availability."
-			},
-			{
-				"list": "Backend APIs: I developed and integrated several APIs to handle the core functionalities, including user authentication, nanny profiles, and search queries."
-			},
-			{
-				"list": "MongoDB Database: The app uses MongoDB to store user and nanny data, ensuring that all information is securely handled and easily accessible, ensuring scalability and flexibility."
-			},
-			{
-				"list": "Special Needs Accommodation: The platform offers options for parents to add detailed information about their child's special needs, helping them find nannies with the appropriate skills and experience and nannies are well-informed and prepared."
-			}
-		],
-		"stack": [
-			{ "name": "Figma", "icon": "/figma.png" },
-			{ "name": "Tailwind CSS", "icon": "/tailwind.png" },
-			{ "name": "Mongo Db", "icon": "/mongodb.png" },
-			{ "name": "Express Js", "icon": "/express.png" },
-			{ "name": "React Js", "icon": "/reactjs.png" },
-			{ "name": "Node Js", "icon": "/node.png" },
-			{ "name": "Photopea", "icon": "/Photopea.png" }
-		],
-		"outro": "The app delivers both performance and aesthetics. This project reflects my focus on solving real-world problems by combining clean design with robust, scalable code to create a seamless user experience."
-	},
-	{
-		"id": 2,
-		"name": "hotdesk",
-		"link": "https://hot-desk-omega.vercel.app/",
-		"mockup": ["/hotdesk-logo.png", "/hotdesk-tab.png", "/hotdesk-desktop.png"],
-		"gradient": "hotdesk",
-		"previewHeader": "A Collaborative Workspace for Creative Minds.",
-		"previewP": "A workspace designed to empower creatives to connect, collaborate, and bring their visions to life.  As a freelance front-end developer, I had the privilege of contributing to this platform, crafting a user experience that fosters creativity and ignites collaboration.",
-		"desc": "hotdesk website",
-		"role": "Frontend developer",
-		"problem": " Creatives often struggle to find a physical and digital space that cater to their need for collaboration and creativity. Most workspaces are designed for solitary work, lacks flexibility, and fails to foster a sense of community.",
-		"solution": "Hot Desk tackles these challenges by creating a vibrant community for creatives. Here, individuals can connect, share expertise, and push each other's boundaries.",
-		"features": [
-			{
-				"list": "Dedicated Workspaces: Hot Desk offers a professional and inspiring environment to focus on individual projects."
-			},
-			{
-				"list": "Collaboration Tools: The platform facilitates seamless communication and idea exchange, fostering a collaborative workflow."
-			},
-			{
-				"list": "Resource Hub: Hot Desk provides access to industry-specific tools and resources, empowering creatives with the right equipment for success."
-			},
-			{
-				"list": "Community-Driven Environment: A hub for creatives to network, share projects, and support one another's work."
-			},
-			{
-				"list": "Modern and Intuitive UI: Designed to be visually appealing and easy to navigate for creatives of all backgrounds."
-			}
-		],
-		"stack": [
-			{ "name": "Tailwind CSS", "icon": "/tailwind.png" },
-			{ "name": "React Js", "icon": "/reactjs.png" }
-		],
-		"outro": "Creativity meets collaboration, providing a space where ideas can thrive and projects can come to life."
-	},
-	{
-		"id": 3,
-		"name": "gisthub",
-		"link": "https://gisthub-seven.vercel.app/",
-		"mockup": [
-			"/gisthub-laptop.png",
-			"/gisthub-laptop.png",
-			"/gisthub-tab.png"
-		],
-		"gradient": "gisthub",
-		"previewHeader": "Bridging the Information Gap Between AEDC, Water Board and Nigerian Citizens",
-		"previewP": "GistHub is a platform designed to address the communication gap between the Abuja Electricity Distribution Company (AEDC), the Water Board, and the citizens of Nigeria. Through a centralized blog, it ensures that citizens stay informed about electricity and water supply updates, scheduled maintenance, and other essential services.",
-		"desc": "gisthub blog",
-		"role": "Full-stack developer",
-		"problem": "Citizens in Nigeria often face a lack of timely and accurate information regarding electricity and water services. There is minimal communication from AEDC and the Water Board, leaving residents unaware of important updates, such as outages, scheduled maintenance, or water supply issues. This information gap creates confusion and frustration for those affected.",
-		"solution": "Creating a platform where citizens can access real-time updates from AEDC and the Water Board. The blog format allows users to stay informed about service interruptions, planned maintenance, and general updates. By streamlining communication, GistHub helps citizens stay prepared and informed, reducing the impact of unexpected outages and service disruptions.",
-		"features": [
-			{
-				"list": "Real-time Updates: Stay informed with the latest information from AEDC and the Water Board."
-			},
-			{
-				"list": "User-Friendly Blog Interface: Easy access to posts and updates, designed for clarity and efficiency."
-			},
-			{
-				"list": "Responsive Design: Fully functional across devices, ensuring accessibility for all users."
-			},
-			{
-				"list": "Content Management: Efficient content delivery powered by a robust CMS for quick and accurate updates."
-			}
-		],
-		"stack": [
-			{ "name": "Figma", "icon": "/figma.png" },
-			{ "name": "Tailwind", "icon": "/tailwind.png" },
-			{ "name": "React Js", "icon": "/reactjs.png" },
-			{ "name": "Next Js", "icon": "/next.png" },
-			{ "name": "Contentful", "icon": "/contentful.png" }
-		],
-		"outro": "GistHub creates an essential bridge between AEDC / Water board and Nigerian citizens, ensuring the public is well-informed about their electricity and water services. Through this platform, communication is streamlined, and the frustrations around power and water updates are significantly reduced."
-	}
+  {
+    "id": 1,
+    "name": "booktalk",
+    "link": "https://book-talk-theta.vercel.app/",
+    "mockup": ["/booktalkRegister.png", "/booktalkDashboard.png"],
+    "gradient": "booktalk",
+    "year": "Apr 2026",
+    "type": "Full-Stack",
+    "previewHeader": "AI-Powered Platform for Book Lovers.",
+    "previewP": "Built to solve a simple problem: making it easier and more enjoyable to discover, read, and discuss books. AI drives every core feature — from mood-based recommendations to real-time book chat.",
+    "desc": "AI book discovery platform",
+    "role": "Full-stack developer",
+    "problem": "Book discovery is overwhelming and fragmented. Readers lack a single space to get personalized recommendations, quickly understand a book before committing, track progress, and connect with a reading community — all in one place.",
+    "solution": "An AI-powered reading companion that personalizes the entire journey — from what to read next, to discussing the book after you finish.",
+    "features": [
+      { "list": "AI book recommendations based on mood and reading history" },
+      { "list": "Instant AI-generated summaries for any book" },
+      { "list": "Chat with AI about any book in real time" },
+      { "list": "Personal reading diary to track progress and notes" },
+      { "list": "Community space for readers to discuss and review books" },
+      { "list": "Top authors and popular reads discovery" }
+    ],
+    "stack": [
+      { "name": "React Js", "icon": "/reactjs.png" },
+      { "name": "Node Js", "icon": "/node.png" },
+      { "name": "Express Js", "icon": "/express.png" },
+      { "name": "MongoDB", "icon": "/mongodb.png" },
+      { "name": "Tailwind CSS", "icon": "/tailwind.png" }
+    ],
+    "outro": "BookTalk bridges the gap between reading alone and reading together, making the entire experience more intelligent, personal, and social."
+  },
+  {
+    "id": 2,
+    "name": "getalead",
+    "link": "http://getalead.online/",
+    "mockup": ["/getleadsLanding.png", "/getleadsDashboard.png"],
+    "gradient": "getalead",
+    "year": "Apr 2026",
+    "type": "Full-Stack",
+    "previewHeader": "AI Lead Discovery for Developers.",
+    "previewP": "GetALead automates the most time-consuming part of business development — finding the right leads. Built for developers and technical freelancers who'd rather be building than prospecting.",
+    "desc": "AI-powered lead generation platform",
+    "role": "Full-stack developer",
+    "problem": "Developers and technical freelancers spend too much time manually searching for potential clients. The process is tedious, inconsistent, and pulls focus away from actual work.",
+    "solution": "An AI-driven platform that discovers, qualifies, and surfaces relevant leads automatically — so developers can focus on building.",
+    "features": [
+      { "list": "AI-powered lead discovery and qualification" },
+      { "list": "Developer-centric filtering and targeting" },
+      { "list": "Automated prospect research and profiling" },
+      { "list": "Clean dashboard for managing and tracking leads" },
+      { "list": "Export and follow-up workflow tools" }
+    ],
+    "stack": [
+      { "name": "React Js", "icon": "/reactjs.png" },
+      { "name": "Node Js", "icon": "/node.png" },
+      { "name": "Tailwind CSS", "icon": "/tailwind.png" }
+    ],
+    "outro": "GetALead turns the most tedious part of freelancing into an automated background process, giving developers their time and focus back."
+  },
+  {
+    "id": 3,
+    "name": "tyler",
+    "link": "https://tyler-xi.vercel.app/",
+    "mockup": ["/tylerVision.png", "/tylerLanding.png"],
+    "gradient": "tyler",
+    "year": "2024",
+    "type": "Frontend",
+    "previewHeader": "A Digital Home for a Real Estate Professional.",
+    "previewP": "A polished portfolio website for Tyler Burrow, a realtor. Built to establish credibility and convert visitors into clients — every design decision made with trust and professionalism in mind.",
+    "desc": "Realtor portfolio website",
+    "role": "Frontend developer",
+    "problem": "Real estate professionals rely heavily on first impressions and trust. A generic or outdated website undermines the credibility needed to win clients in a competitive market.",
+    "solution": "A clean, professional, and conversion-focused portfolio website tailored to Tyler's brand as a realtor.",
+    "features": [
+      { "list": "Professional personal brand presentation" },
+      { "list": "Property and listing showcase section" },
+      { "list": "Client testimonials and social proof" },
+      { "list": "Contact and inquiry forms" },
+      { "list": "Fully responsive across all devices" }
+    ],
+    "stack": [
+      { "name": "React Js", "icon": "/reactjs.png" },
+      { "name": "Tailwind CSS", "icon": "/tailwind.png" }
+    ],
+    "outro": "The final product gave Tyler a professional digital presence that reflects the quality of service he provides to his clients."
+  },
+  {
+    "id": 4,
+    "name": "hotdesk",
+    "link": "https://hot-desk-omega.vercel.app/",
+    "mockup": ["/hotdeskLocation.png", "/hotdeskLanding.png"],
+    "gradient": "hotdesk",
+    "year": "2023",
+    "type": "Frontend",
+    "previewHeader": "A Collaborative Workspace for Creative Minds.",
+    "previewP": "A workspace designed to empower creatives to connect, collaborate, and bring their visions to life. As a freelance frontend developer, I crafted an experience that fosters creativity and ignites collaboration.",
+    "desc": "hotdesk website",
+    "role": "Frontend developer",
+    "problem": "Creatives often struggle to find a space that caters to their need for collaboration. Most workspaces are designed for solitary work and fail to foster a sense of community.",
+    "solution": "Hot Desk creates a vibrant community for creatives to connect, share expertise, and push each other's boundaries.",
+    "features": [
+      {
+        "list": "Dedicated workspaces for individual projects in a professional environment"
+      },
+      {
+        "list": "Collaboration tools that facilitate seamless communication and idea exchange"
+      },
+      {
+        "list": "Resource hub with access to industry-specific tools and equipment"
+      },
+      {
+        "list": "Community-driven environment for networking and project support"
+      },
+      {
+        "list": "Modern and intuitive UI designed for creatives of all backgrounds"
+      }
+    ],
+    "stack": [
+      { "name": "Tailwind CSS", "icon": "/tailwind.png" },
+      { "name": "React Js", "icon": "/reactjs.png" }
+    ],
+    "outro": "Creativity meets collaboration, providing a space where ideas can thrive and projects can come to life."
+  },
+  {
+    "id": 5,
+    "name": "homer",
+    "link": "https://github.com/Safiyah07/homer",
+    "isGithub": true,
+    "mockup": ["/homerAPI.png", "/homerAPI2.png"],
+    "gradient": "homer",
+    "year": "Mar 2026",
+    "type": "Backend API",
+    "previewHeader": "Voucher Platform Bridging Real Estate & Dining.",
+    "previewP": "Homer connects real estate companies and restaurants through a voucher system — when buyers complete property purchases, they receive dining vouchers tracked through issuance, redemption, and payment with full audit trails.",
+    "desc": "Voucher management platform",
+    "role": "Backend developer",
+    "problem": "Real estate companies had no structured way to offer buyer incentives that could be redeemed at partner restaurants, tracked transparently, and settled efficiently — leaving value on the table for all three parties.",
+    "solution": "A multi-role backend API where real estate firms register buyers and issue vouchers, restaurants redeem them after buyer confirmation, and payments flow back to restaurants with full transaction history.",
+    "features": [
+      {
+        "list": "Multi-role authentication — admin, real estate company, and restaurant accounts"
+      },
+      {
+        "list": "Buyer registration with automatic voucher issuance and email delivery via Nodemailer"
+      },
+      {
+        "list": "Voucher lookup, balance checking, and full transaction history"
+      },
+      {
+        "list": "Restaurant redemption flow with buyer confirmation and dispute system"
+      },
+      { "list": "Daily redemption reports and per-voucher audit trail" },
+      {
+        "list": "Payment initiation to restaurants with Nigerian bank account verification via Paystack"
+      },
+      { "list": "Swagger UI documentation at /api-docs with JWT auth support" }
+    ],
+    "stack": [
+      { "name": "Node Js", "icon": "/node.png" },
+      { "name": "Express Js", "icon": "/express.png" },
+      { "name": "PostgreSQL", "icon": "/mongodb.png" },
+      { "name": "Prisma ORM", "icon": "/next.png" },
+      { "name": "JWT + bcrypt", "icon": "/node.png" },
+      { "name": "Nodemailer", "icon": "/express.png" },
+      { "name": "Swagger UI", "icon": "/figma.png" }
+    ],
+    "outro": "Homer delivers a production-ready API handling the complete voucher lifecycle — from property sale to restaurant payment — with three user roles, audit trails, and clear Swagger documentation throughout."
+  }
 ]

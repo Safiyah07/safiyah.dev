@@ -1,0 +1,13 @@
+[
+  {
+    "id": 1,
+    "name": "african-startups",
+    "tag": "white paper",
+    "date": "5-1-2026",
+    "title": "Why African Startups Struggle to Scale Their MVPs: A Technical Root Cause Analysis",
+    "linkedinUrl": "/papers/african-startups.pdf",
+    "preview": "A comprehensive analysis of the technical challenges African startups face when scaling their MVPs, including infrastructure constraints, architectural pitfalls, and talent gaps.",
+    "description": "A white paper exploring the technical root causes behind the scaling struggles of African startups, with insights and recommendations for building scalable solutions in the unique African context.",
+    "pdfFile": "/papers/african-startups.pdf"
+  }
+]

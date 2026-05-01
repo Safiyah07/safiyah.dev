@@ -1,85 +1,221 @@
+import { useContext, useRef, useState } from "react";
 import { Link } from "react-router-dom";
-import Button from "../shared/Button";
-import { BsArrowUp, BsMoon, BsSun } from "react-icons/bs";
-import { useContext } from "react";
+import { BsMoon, BsSun, BsArrowUp } from "react-icons/bs";
 import ThemeContext from "../context/ThemeContext";
 
+// Replace this with your Formspree form ID after signing up at formspree.io
+// Create an account → New Form → set email to thedevvteam@gmail.com → copy the ID
+const FORMSPREE_ID = "YOUR_FORM_ID";
+
+const MARQUEE_TEXT =
+	"AVAILABLE FOR WORK — SAFIYAH AMEDU — FULL-STACK DEVELOPER — BASED IN NIGERIA — ";
+
 function Footer() {
-	const { theme, setTheme } = useContext(ThemeContext);
+	const { theme, toggleTheme } = useContext(ThemeContext);
+	const formRef = useRef(null);
+	const [fields, setFields] = useState({ name: "", email: "", message: "" });
+	const [status, setStatus] = useState("idle"); // idle | sending | success | error
+
+	const handleChange = (e) => {
+		setFields((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+	};
+
+	const handleSubmit = async (e) => {
+		e.preventDefault();
+		if (FORMSPREE_ID === "YOUR_FORM_ID") {
+			alert("Contact form not yet configured. See FORMSPREE_ID in Footer.jsx.");
+			return;
+		}
+		setStatus("sending");
+		try {
+			const res = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
+				method: "POST",
+				headers: { "Content-Type": "application/json" },
+				body: JSON.stringify(fields),
+			});
+			if (res.ok) {
+				setStatus("success");
+				setFields({ name: "", email: "", message: "" });
+			} else {
+				setStatus("error");
+			}
+		} catch {
+			setStatus("error");
+		}
+	};
 
 	return (
-		<section className="pt-20 text-2xl">
-			<Button>
-				<div className="relative">
-					<div className="flex justify-between gap-20 px-16 py-20 md:px-5 sm:px-0 md:flex-col sm:flex-col md:gap-10 sm:gap-10">
-						<div className="flex flex-col w-3/5 gap-20 md:gap-10 sm:gap-10 md:w-full sm:w-full">
-							<h1 className="tracking-widest md:tracking-wide leading-snug text-[50px] max-md:text-[40px] md:text-[40px] sm:text-2xl capitalize">
-								Let&apos;s talk about your project
-							</h1>
-							<Button className={"px-7"}>
-								<a href="mailto:safiyahmasud@gmail.com">Get in touch</a>
-							</Button>
-						</div>
+		<footer id="contact" className="mt-10">
+			{/* Marquee */}
+			<div className="overflow-hidden py-4" style={{ borderTop: "1px solid var(--text-faint)", borderBottom: "1px solid var(--text-faint)", opacity: 0.6 }}>
+				<div className="marquee-track text-xs tracking-[0.22em] font-grotesque" style={{ color: "var(--text-muted)" }}>
+					{MARQUEE_TEXT.repeat(6)}
+				</div>
+			</div>
 
-						<div className="flex flex-col lg:gap-10 max-md:gap-8 gap-5 lg:items-end max-md:items-end">
-							<Button
-								className={`${
-									theme === "dark" ? "dark-btn" : "light-btn"
-								} px-5 md:px-3 sm:px-3`}
+			{/* Contact form */}
+			<div className="px-8 sm:px-5 pt-20 pb-16 sm:pt-14">
+				<div className="flex items-start justify-between sm:flex-col sm:gap-12 gap-20">
+					{/* Left: heading */}
+					<div className="flex-1">
+						<p
+							className="text-xs tracking-[0.3em] uppercase font-grotesque mb-6"
+							style={{ color: "var(--text-muted)" }}
+						>
+							Have a project in mind?
+						</p>
+						<h2 className="text-[clamp(28px,4.5vw,60px)] leading-[1.1] tracking-tight mb-4">
+							Let&apos;s build something
+							<br />
+							<span style={{ color: "#bdff68" }}>worth talking about.</span>
+						</h2>
+						<p
+							className="text-sm font-grotesque mt-6 max-w-xs"
+							style={{ color: "var(--text-muted)" }}
+						>
+							Or reach me directly at{" "}
+							<a
+								href="mailto:thedevvteam@gmail.com"
+								className="underline underline-offset-2"
+								style={{ color: "var(--text-secondary)" }}
 							>
-								<div className="flex items-center justify-center gap-6 lg:gap-8 max-md:gap-8">
-									<BsSun
-										// size={20}
-										className="z-10 cursor-pointer"
-										onClick={() => setTheme("light")}
-									/>{" "}
-									<BsMoon
-										// size={20}
-										className={` cursor-pointer z-10`}
-										onClick={() => setTheme("dark")}
-									/>
-								</div>
-							</Button>
-							<Link
-								to={
-									"https://drive.google.com/file/d/19_hjQaJjxMsmRn2VhfqwIqakjaJHkU-U/view"
-								}
-								target="_blank"
-								rel="noopener noreferrer"
-							>
-								CV
-							</Link>
-							<Link
-								to={"https://www.linkedin.com/in/safiyah-amedu-841229370/"}
-								target="_blank"
-								rel="noopener noreferrer"
-							>
-								LinkedIn
-							</Link>
-							<a href="tel:+2348147143736">
-								+234 814 714 3736
+								thedevvteam@gmail.com
 							</a>
-							{/* <Link
-								to={"https://twitter.com/Sa_fi_yah"}
-								target="_blank"
-								rel="noopener noreferrer"
-							>
-								Twitter/X
-							</Link> */}
-						</div>
+						</p>
 					</div>
 
-					<a
-						href="#top"
-						className="flex justify-end cursor-pointer pr-12 md:pr-0 sm:pr-0 pb-5"
+					{/* Right: form */}
+					<form
+						ref={formRef}
+						onSubmit={handleSubmit}
+						className="flex-1 sm:w-full flex flex-col gap-8"
 					>
-						<Button className={"px-[10px] py-2 rounded-full"}>
-							<BsArrowUp />
-						</Button>
+						<div className="grid grid-cols-2 sm:grid-cols-1 gap-6">
+							<div>
+								<input
+									type="text"
+									name="name"
+									placeholder="Your name"
+									value={fields.name}
+									onChange={handleChange}
+									required
+									className="form-input"
+								/>
+							</div>
+							<div>
+								<input
+									type="email"
+									name="email"
+									placeholder="Your email"
+									value={fields.email}
+									onChange={handleChange}
+									required
+									className="form-input"
+								/>
+							</div>
+						</div>
+						<div>
+							<textarea
+								name="message"
+								placeholder="Tell me about your project..."
+								value={fields.message}
+								onChange={handleChange}
+								required
+								rows={4}
+								className="form-input resize-none"
+							/>
+						</div>
+						<div className="flex items-center justify-between sm:flex-col sm:items-start sm:gap-4">
+							<button
+								type="submit"
+								disabled={status === "sending"}
+								className="text-xs tracking-[0.25em] uppercase px-8 py-3.5 rounded-full font-grotesque transition-all duration-300 disabled:opacity-50"
+								style={{
+									background: "#bdff68",
+									color: "#0b1215",
+									fontWeight: 600,
+								}}
+							>
+								{status === "sending" ? "Sending..." : "Send Message →"}
+							</button>
+							{status === "success" && (
+								<span
+									className="text-sm font-grotesque"
+									style={{ color: "#bdff68" }}
+								>
+									Message sent! I&apos;ll get back to you soon.
+								</span>
+							)}
+							{status === "error" && (
+								<span
+									className="text-sm font-grotesque"
+									style={{ color: "#e066ff" }}
+								>
+									Something went wrong. Try emailing directly.
+								</span>
+							)}
+						</div>
+					</form>
+				</div>
+			</div>
+
+			{/* Bottom bar */}
+			<div
+				className="px-8 sm:px-5 py-6 flex items-center justify-between sm:flex-col sm:gap-5"
+				style={{ borderTop: "1px solid var(--text-faint)", opacity: 1 }}
+			>
+				<div className="flex items-center gap-8 sm:gap-5 flex-wrap">
+					<Link
+						to="https://www.linkedin.com/in/safiyah-amedu-841229370/"
+						target="_blank"
+						rel="noopener noreferrer"
+						className="text-xs tracking-[0.25em] uppercase font-grotesque transition-opacity hover:opacity-100"
+						style={{ color: "var(--text-muted)" }}
+					>
+						LinkedIn
+					</Link>
+					<Link
+						to="https://drive.google.com/file/d/19_hjQaJjxMsmRn2VhfqwIqakjaJHkU-U/view"
+						target="_blank"
+						rel="noopener noreferrer"
+						className="text-xs tracking-[0.25em] uppercase font-grotesque transition-opacity hover:opacity-100"
+						style={{ color: "var(--text-muted)" }}
+					>
+						CV
+					</Link>
+					<a
+						href="tel:+2348147143736"
+						className="text-xs tracking-[0.25em] uppercase font-grotesque transition-opacity hover:opacity-100"
+						style={{ color: "var(--text-muted)" }}
+					>
+						+234 814 714 3736
 					</a>
 				</div>
-			</Button>
-		</section>
+
+				<div className="flex items-center gap-6">
+					<button
+						onClick={toggleTheme}
+						className="flex items-center gap-2 text-xs tracking-[0.25em] uppercase font-grotesque transition-opacity hover:opacity-100"
+						style={{ color: "var(--text-muted)" }}
+						aria-label="Toggle theme"
+					>
+						{theme === "dark" ? (
+							<><BsSun size={12} /> Light</>
+						) : (
+							<><BsMoon size={12} /> Dark</>
+						)}
+					</button>
+					<a
+						href="#top"
+						className="transition-opacity hover:opacity-100"
+						style={{ color: "var(--text-muted)" }}
+						aria-label="Back to top"
+					>
+						<BsArrowUp size={14} />
+					</a>
+				</div>
+			</div>
+		</footer>
 	);
 }
 

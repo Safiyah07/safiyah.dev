@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import HomePage from "../components/Home";
+import HomeHero from "../components/Home";
 import Projects from "../components/Projects";
 
 function Home() {
@@ -8,11 +8,8 @@ function Home() {
 	}, []);
 
 	return (
-		<main
-			id="top"
-			className="flex flex-col gap-20"
-		>
-			<HomePage />
+		<main id="top">
+			<HomeHero />
 			<Projects />
 		</main>
 	);

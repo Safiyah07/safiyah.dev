@@ -14,17 +14,45 @@ body {
 }
 
 h1,
+h2,
+h3,
 h4 {
 	font-family: "Michroma", sans-serif;
 }
 
+/* CSS vars for theme-aware text */
+:root {
+	--text-body: #1a1a2e;
+	--text-secondary: #3d3d5c;
+	--text-muted: #6b6b8a;
+	--text-faint: #9999aa;
+}
+
+.dark-theme {
+	--text-body: #e8e4f0;
+	--text-secondary: rgba(232, 228, 240, 0.75);
+	--text-muted: rgba(232, 228, 240, 0.5);
+	--text-faint: rgba(232, 228, 240, 0.3);
+}
+
+/* Hide system cursor on pointer devices */
+@media (pointer: fine) {
+	*,
+	*::before,
+	*::after {
+		cursor: none !important;
+	}
+}
+
+/* === Width fill utility === */
 .wid {
 	width: 100%;
-	width: -moz-available; /* WebKit-based browsers will ignore this. */
-	width: -webkit-fill-available; /* Mozilla-based browsers will ignore this. */
+	width: -moz-available;
+	width: -webkit-fill-available;
 	width: stretch;
 }
 
+/* === Button shimmer === */
 .dark-btn::before,
 .light-btn::before {
 	content: "";
@@ -54,57 +82,126 @@ h4 {
 	);
 }
 
+/* === Project gradient cards === */
 .nanny {
 	background-image: linear-gradient(
 		142deg,
-		rgba(226, 255, 188, 0.5) 0%,
-		rgba(11, 18, 21, 0) 9%,
-		rgba(11, 18, 21, 0) 52%,
-		rgba(11, 18, 21, 0) 86%,
-		rgba(226, 255, 188, 0.5) 100%
+		rgba(226, 255, 188, 0.4) 0%,
+		rgba(11, 18, 21, 0) 15%,
+		rgba(226, 255, 188, 0.4) 100%
 	);
 }
-
 .gisthub {
 	background-image: linear-gradient(
 		142deg,
-		rgba(255, 145, 77, 1) 0%,
-		rgba(11, 18, 21, 0) 9%,
-		rgba(11, 18, 21, 0) 52%,
-		rgba(11, 18, 21, 0) 86%,
-		rgba(255, 145, 77, 1) 100%
+		rgba(255, 145, 77, 0.5) 0%,
+		rgba(11, 18, 21, 0) 15%,
+		rgba(255, 145, 77, 0.5) 100%
 	);
 }
-
 .hotdesk {
 	background-image: linear-gradient(
 		142deg,
-		rgba(148, 146, 240, 0.5) 0%,
-		rgba(11, 18, 21, 0) 9%,
-		rgba(11, 18, 21, 0) 52%,
-		rgba(11, 18, 21, 0) 86%,
-		rgba(148, 146, 240, 0.5) 100%
+		rgba(148, 146, 240, 0.3) 0%,
+		rgba(11, 18, 21, 0) 25%,
+		rgba(148, 146, 240, 0.3) 100%
+	);
+}
+.booktalk {
+	background-image: linear-gradient(
+		142deg,
+		rgba(99, 179, 237, 0.25) 0%,
+		rgba(11, 18, 21, 0) 25%,
+		rgba(99, 179, 237, 0.25) 100%
+	);
+}
+.getalead {
+	background-image: linear-gradient(
+		142deg,
+		rgba(189, 255, 104, 0.2) 0%,
+		rgba(11, 18, 21, 0) 25%,
+		rgba(189, 255, 104, 0.2) 100%
+	);
+}
+.tyler {
+	background-image: linear-gradient(
+		142deg,
+		rgba(224, 102, 255, 0.2) 0%,
+		rgba(11, 18, 21, 0) 25%,
+		rgba(224, 102, 255, 0.2) 100%
+	);
+}
+.homer {
+	background-image: linear-gradient(
+		142deg,
+		rgba(255, 167, 38, 0.22) 0%,
+		rgba(11, 18, 21, 0) 25%,
+		rgba(255, 167, 38, 0.22) 100%
 	);
 }
 
-/* :root {
-	font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-	line-height: 1.5;
-	font-weight: 400;
-
-	color-scheme: light dark;
-	color: rgba(255, 255, 255, 0.87);
-	background-color: #242424;
-
-	font-synthesis: none;
-	text-rendering: optimizeLegibility;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+/* === Clip container for text reveal === */
+.clip-text {
+	overflow: hidden;
+	display: block;
 }
 
-@media (prefers-color-scheme: light) {
-	:root {
-		color: #213547;
-		background-color: #ffffff;
-	}
-} */
+/* === Marquee === */
+@keyframes marquee {
+	from { transform: translateX(0); }
+	to { transform: translateX(-50%); }
+}
+
+.marquee-track {
+	display: inline-block;
+	white-space: nowrap;
+	animation: marquee 28s linear infinite;
+}
+
+/* === Form inputs === */
+.form-input {
+	background: transparent;
+	border: none;
+	border-bottom: 1px solid var(--text-faint);
+	padding: 12px 0;
+	width: 100%;
+	font-family: "Darker Grotesque", sans-serif;
+	font-size: 1rem;
+	color: var(--text-body);
+	outline: none;
+	transition: border-color 0.3s;
+}
+
+.form-input::placeholder {
+	color: var(--text-faint);
+}
+
+.form-input:focus {
+	border-bottom-color: #bdff68;
+}
+
+/* === Project hover image preview === */
+.project-preview {
+	position: fixed;
+	pointer-events: none;
+	z-index: 100;
+	width: 320px;
+	height: 220px;
+	border-radius: 12px;
+	overflow: hidden;
+	opacity: 0;
+	transform: scale(0.9) rotate(-2deg);
+	transition: none;
+}
+
+/* === Custom scrollbar === */
+::-webkit-scrollbar {
+	width: 3px;
+}
+::-webkit-scrollbar-track {
+	background: #0b1215;
+}
+::-webkit-scrollbar-thumb {
+	background: #bdff68;
+	border-radius: 2px;
+}

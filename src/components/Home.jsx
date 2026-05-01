@@ -1,91 +1,126 @@
-import { useContext, useEffect } from "react";
-import { BsChevronDoubleDown } from "react-icons/bs";
-import BlackStar from "../assets/black-star.svg";
-import WhiteStar from "../assets/white-star.svg";
-import ThemeContext from "../context/ThemeContext";
-import Button from "./../shared/Button";
-
+import { useContext, useEffect, useRef } from "react";
 import { gsap } from "gsap";
-// import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { LoadedContext } from "../context/LoadedContext";
 
-// gsap.registerPlugin(ScrollTrigger);
+function HomeHero() {
+  const loaded = useContext(LoadedContext);
+  const heroRef = useRef(null);
 
-function Home() {
-	const { theme } = useContext(ThemeContext);
+  useEffect(() => {
+    if (!loaded) return;
+    const ctx = gsap.context(() => {
+      gsap.fromTo(
+        ".hero-word",
+        { y: "110%", opacity: 0 },
+        {
+          y: "0%",
+          opacity: 1,
+          duration: 1.2,
+          stagger: 0.08,
+          ease: "power4.out",
+          delay: 0.1,
+        }
+      );
+      gsap.fromTo(
+        ".hero-sub",
+        { y: 20, opacity: 0 },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 0.9,
+          stagger: 0.08,
+          ease: "power3.out",
+          delay: 0.5,
+        }
+      );
+    }, heroRef);
 
-	useEffect(() => {
-		// gsap.from(".hero", {
-		// 	opacity: 0,
-		// 	y: 50,
-		// 	duration: 1,
-		// 	scrollTrigger: {
-		// 		trigger: ".hero", // Element to trigger animation
-		// 		start: "top 80%", // When to start the animation (80% down the viewport)
-		// 		toggleActions: "play none none none", // Control animation behavior on scroll
-		// 	},
-		// });
-		gsap.fromTo(
-			".hero",
-			{ opacity: 0, duration: 0, y: 40 },
-			{
-				y: 0,
-				opacity: 1,
-				duration: 1,
-				stagger: 0.5,
-			}
-		);
-	}, []);
-	return (
-		<section
-			id="home"
-			className="flex flex-col items-center justify-center h-svh"
-		>
-			<div className="w-full text-xl lg:pl-40 md:pb-10 sm:pb-10">
-				<div className="flex flex-col gap-8">
-					<div className="tracking-widest leading-tight text-[80px] md:text-[60px] sm:text-[35px] lg:w-3/4">
-						<h1 className="flex gap-10 md:gap-3 sm:gap-4 hero">
-							Full-Stack
-							<img
-								src={`${theme === "dark" ? WhiteStar : BlackStar}`}
-								alt=""
-								className="w-10 md:w-8 sm:w-8 animate-pulse"
-							/>
-						</h1>
-						<h1 className="flex gap-32 md:gap-12 sm:gap-12 hero">
-							Developer{" "}
-							<img
-								src={`${theme === "dark" ? WhiteStar : BlackStar}`}
-								alt=""
-								className="w-10 md:w-8 sm:w-8 animate-pulse"
-							/>
-						</h1>
-					</div>
-					{/* <h1>Developer</h1> */}
-					<p className="lg:w-1/2 max-md:w-[73%] md:w-3/4 sm:w-full">
-						<span className="hero">
-							Hi, I’m Safiyah👋, I develop beautiful and efficient websites and
-							web apps.{" "}
-						</span>
-						<span className="hero">
-							When i&apos;m not coding, i explore psychology and indulge in
-							culinary{" "}
-						</span>
-						<span className="hero">adventures.</span>
-					</p>
-					<a
-						href="mailto:safiyahmasud@gmail.com"
-						className="block mt-4 mb-6 w-fit lg:mb-0 max-md:mb-0"
-					>
-						<Button>Get in touch</Button>
-					</a>
-				</div>
-			</div>
+    return () => ctx.revert();
+  }, [loaded]);
 
-			<div className="flex items-center justify-center animate-bounce">
-				<BsChevronDoubleDown size={30} />
-			</div>
-		</section>
-	);
+  const date = new Date();
+  const currentYear = date.getFullYear();
+
+  return (
+    <section
+      ref={heroRef}
+      className="min-h-svh flex flex-col justify-center px-8 md:px-6 sm:px-5 pt-24 pb-20 relative"
+    >
+      {/* Top label row */}
+      <div className="hero-sub flex items-center justify-between mb-14 sm:mb-10">
+        <span
+          className="text-xs tracking-[0.3em] uppercase font-grotesque"
+          style={{ color: "var(--text-muted)" }}
+        >
+          Full-Stack Developer
+        </span>
+        <span
+          className="text-xs tracking-[0.3em] uppercase font-grotesque"
+          style={{ color: "var(--text-faint)" }}
+        >
+          {currentYear}
+        </span>
+      </div>
+
+      {/* Display heading */}
+      <div className="mb-14 sm:mb-10">
+        <div className="clip-text">
+          <h1 className="hero-word text-[clamp(56px,11vw,150px)] leading-[0.9] tracking-tight">
+            Full-Stack
+          </h1>
+        </div>
+        <div className="clip-text">
+          <h1
+            className="hero-word text-[clamp(56px,11vw,150px)] leading-[0.9] tracking-tight"
+            style={{ WebkitTextStroke: "1px currentColor" }}
+          >
+            Developer
+          </h1>
+        </div>
+      </div>
+
+      {/* Divider */}
+      <div
+        className="hero-sub w-full h-px mb-14 sm:mb-10"
+        style={{ background: "var(--text-faint)", opacity: 0.4 }}
+      />
+
+      {/* Sub row */}
+      <div className="flex items-end justify-between gap-10 sm:flex-col sm:items-start sm:gap-8">
+        <p
+          className="hero-sub text-xl sm:text-lg font-grotesque leading-relaxed max-w-md"
+          style={{ color: "var(--text-secondary)" }}
+        >
+          Hi, I&apos;m Safiyah — building digital products that are as
+          performant as they are beautiful.
+        </p>
+        <a
+          href="#contact"
+          className="hero-sub flex-shrink-0 inline-flex items-center gap-3 text-xs tracking-[0.25em] uppercase px-7 py-3.5 rounded-full font-grotesque transition-all duration-300 hover:gap-5"
+          style={{
+            border: "1px solid #bdff68",
+            color: "#bdff68",
+          }}
+        >
+          Get in touch <span>↗</span>
+        </a>
+      </div>
+
+      {/* Scroll indicator */}
+      <div className="hero-sub absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3">
+        <span
+          className="text-[10px] tracking-[0.35em] uppercase font-grotesque"
+          style={{ color: "var(--text-faint)" }}
+        >
+          Scroll
+        </span>
+        <div
+          className="w-px h-10 animate-pulse"
+          style={{ background: "var(--text-faint)" }}
+        />
+      </div>
+    </section>
+  );
 }
 
-export default Home;
+export default HomeHero;
