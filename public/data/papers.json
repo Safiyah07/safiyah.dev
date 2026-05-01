@@ -1,13 +1,13 @@
 [
   {
     "id": 1,
-    "name": "african-startups",
+    "name": "african-startups-struggles",
     "tags": ["White Paper", "Engineering"],
     "date": "2026-05-01",
     "title": "Why African Startups Struggle to Scale Their MVPs: A Technical Root Cause Analysis",
-    "linkedinUrl": "/papers/african-startups.pdf",
+    "linkedinUrl": "https://www.linkedin.com/in/safiyah-amedu-841229370/overlay/1777674988826/single-media-viewer/?profileId=ACoAAFveu3EBmbrtWXdbK9J41EBPAcz_O9RUPzM&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_featured_details%3B5haDSIK%2FTQGAjNAKihpKyQ%3D%3D",
     "preview": "A comprehensive analysis of the technical challenges African startups face when scaling their MVPs, including infrastructure constraints, architectural pitfalls, and talent gaps.",
     "description": "A white paper exploring the technical root causes behind the scaling struggles of African startups, with insights and recommendations for building scalable solutions in the unique African context.",
-    "pdfFile": "/papers/african-startups.pdf"
+    "pdfFile": "/papers/african-startup-struggles.pdf"
   }
 ]
