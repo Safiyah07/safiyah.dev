@@ -116,7 +116,7 @@ function About() {
         {/* Intro */}
         <section className="reveal-section mb-24 sm:mb-16">
           <span
-            className="text-xs tracking-[0.3em] uppercase font-grotesque block mb-8"
+            className="text-sm font-medium tracking-[0.2em] uppercase font-grotesque block mb-8"
             style={{ color: "var(--text-muted)" }}
           >
             About
@@ -125,7 +125,7 @@ function About() {
             Safiyah Amedu
           </h1>
           <div
-            className="space-y-5 text-xl sm:text-lg font-grotesque leading-relaxed max-w-2xl"
+            className="space-y-5 text-2xl sm:text-xl font-grotesque leading-relaxed max-w-2xl"
             style={{ color: "var(--text-secondary)" }}
           >
             <p>
@@ -159,13 +159,13 @@ function About() {
             }}
           >
             <span
-              className="text-xs tracking-[0.3em] uppercase font-grotesque block mb-6"
+              className="text-sm font-medium tracking-[0.2em] uppercase font-grotesque block mb-6"
               style={{ color: "var(--green)" }}
             >
               What makes me stand out
             </span>
             <p
-              className="text-xl sm:text-lg font-grotesque leading-relaxed"
+              className="text-2xl sm:text-xl font-grotesque leading-relaxed"
               style={{ color: "var(--text-secondary)" }}
             >
               I combine AI integration, UI clarity with backend depth. Whether
@@ -181,7 +181,7 @@ function About() {
         {/* Experience */}
         <section className="reveal-section mb-24 sm:mb-16">
           <span
-            className="text-xs tracking-[0.3em] uppercase font-grotesque block mb-12 sm:mb-8"
+            className="text-sm font-medium tracking-[0.2em] uppercase font-grotesque block mb-12 sm:mb-8"
             style={{ color: "var(--text-muted)" }}
           >
             Experience
@@ -192,20 +192,20 @@ function About() {
                 <div className="flex items-start justify-between sm:flex-col sm:gap-1 mb-5">
                   <div>
                     <h3
-                      className="text-base font-grotesque tracking-wide"
+                      className="text-lg font-grotesque tracking-wide"
                       style={{ color: "var(--text-body)" }}
                     >
                       {job.company}
                     </h3>
                     <p
-                      className="text-sm font-grotesque mt-1"
+                      className="text-base font-grotesque mt-1"
                       style={{ color: "var(--text-muted)" }}
                     >
                       {job.role}
                     </p>
                   </div>
                   <span
-                    className="text-xs font-grotesque tracking-widest flex-shrink-0 mt-1"
+                    className="text-sm font-medium font-grotesque tracking-widest flex-shrink-0 mt-1"
                     style={{ color: "var(--green)" }}
                   >
                     {job.period}
@@ -215,7 +215,7 @@ function About() {
                   {job.points.map((point, i) => (
                     <li
                       key={i}
-                      className="flex gap-3 text-base font-grotesque leading-relaxed"
+                      className="flex gap-3 text-lg font-grotesque leading-relaxed"
                       style={{ color: "var(--text-secondary)" }}
                     >
                       <span
@@ -236,7 +236,7 @@ function About() {
         {/* What I do */}
         <section className="reveal-section mb-24 sm:mb-16">
           <span
-            className="text-xs tracking-[0.3em] uppercase font-grotesque block mb-12 sm:mb-8"
+            className="text-sm font-medium tracking-[0.2em] uppercase font-grotesque block mb-12 sm:mb-8"
             style={{ color: "var(--text-muted)" }}
           >
             What I do
@@ -244,13 +244,13 @@ function About() {
           <div className="grid grid-cols-2 sm:grid-cols-1 gap-12 sm:gap-8">
             <div>
               <h3
-                className="text-sm tracking-widest uppercase mb-5 font-grotesque border-b pb-3"
+                className="text-base font-medium tracking-widest uppercase mb-5 font-grotesque border-b pb-3"
                 style={{ color: "var(--text-body)", borderColor: "#bdff6840" }}
               >
                 Frontend Development
               </h3>
               <ul
-                className="space-y-3 text-base font-grotesque leading-relaxed"
+                className="space-y-3 text-lg font-grotesque leading-relaxed"
                 style={{ color: "var(--text-secondary)" }}
               >
                 <li>Build responsive and interactive UIs</li>
@@ -261,13 +261,13 @@ function About() {
             </div>
             <div>
               <h3
-                className="text-sm tracking-widest uppercase mb-5 font-grotesque border-b pb-3"
+                className="text-base font-medium tracking-widest uppercase mb-5 font-grotesque border-b pb-3"
                 style={{ color: "var(--text-body)", borderColor: "#e066ff40" }}
               >
                 Backend Development
               </h3>
               <ul
-                className="space-y-3 text-base font-grotesque leading-relaxed"
+                className="space-y-3 text-lg font-grotesque leading-relaxed"
                 style={{ color: "var(--text-secondary)" }}
               >
                 <li>Build robust REST APIs with Node &amp; Express</li>
@@ -282,7 +282,7 @@ function About() {
         {/* Tech stack */}
         <section className="reveal-section mb-24 sm:mb-16">
           <span
-            className="text-xs tracking-[0.3em] uppercase font-grotesque block mb-12 sm:mb-8"
+            className="text-sm font-medium tracking-[0.2em] uppercase font-grotesque block mb-12 sm:mb-8"
             style={{ color: "var(--text-muted)" }}
           >
             Tech Stack
@@ -293,7 +293,7 @@ function About() {
               className="mb-10"
             >
               <span
-                className="text-[11px] tracking-[0.3em] uppercase font-grotesque block mb-4"
+                className="text-xs font-medium tracking-[0.2em] uppercase font-grotesque block mb-4"
                 style={{ color: accent }}
               >
                 {title}
@@ -302,7 +302,7 @@ function About() {
                 {items.map((item) => (
                   <span
                     key={item}
-                    className="text-base font-grotesque"
+                    className="text-lg font-grotesque"
                     style={{ color: "var(--text-secondary)" }}
                   >
                     {item}
@@ -316,13 +316,13 @@ function About() {
         {/* Beyond code */}
         <section className="reveal-section">
           <span
-            className="text-xs tracking-[0.3em] uppercase font-grotesque block mb-10"
+            className="text-sm font-medium tracking-[0.2em] uppercase font-grotesque block mb-10"
             style={{ color: "var(--text-muted)" }}
           >
             Beyond Code
           </span>
           <p
-            className="text-xl sm:text-lg font-grotesque leading-relaxed max-w-xl"
+            className="text-2xl sm:text-xl font-grotesque leading-relaxed max-w-xl"
             style={{ color: "var(--text-secondary)" }}
           >
             When I&apos;m not building, you&apos;ll find me deep in a psychology

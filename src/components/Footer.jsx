@@ -36,6 +36,7 @@ function Footer() {
       if (res.ok) {
         setStatus("success");
         setFields({ name: "", email: "", message: "" });
+        setTimeout(() => setStatus("idle"), 5000);
       } else {
         setStatus("error");
       }
@@ -59,7 +60,7 @@ function Footer() {
         }}
       >
         <div
-          className="marquee-track text-xs tracking-[0.22em] font-grotesque"
+          className="marquee-track text-base font-extrabold tracking-[0.18em] font-grotesque"
           style={{ color: "var(--text-muted)" }}
         >
           {MARQUEE_TEXT.repeat(6)}
@@ -72,7 +73,7 @@ function Footer() {
           {/* Left: heading */}
           <div className="flex-1">
             <p
-              className="text-xs tracking-[0.3em] uppercase font-grotesque mb-6"
+              className="text-sm font-medium tracking-[0.2em] uppercase font-grotesque mb-6"
               style={{ color: "var(--text-muted)" }}
             >
               Have a project in mind?
@@ -83,7 +84,7 @@ function Footer() {
               <span style={{ color: "#bdff68" }}>worth talking about.</span>
             </h2>
             <p
-              className="text-sm font-grotesque mt-6 max-w-xs"
+              className="text-base font-grotesque mt-6 max-w-xs"
               style={{ color: "var(--text-muted)" }}
             >
               Or reach me directly at{" "}
@@ -142,7 +143,7 @@ function Footer() {
               <button
                 type="submit"
                 disabled={status === "sending"}
-                className="text-xs tracking-[0.25em] uppercase px-8 py-3.5 rounded-full font-grotesque transition-all duration-300 disabled:opacity-50"
+                className="text-sm font-medium tracking-[0.2em] uppercase px-8 py-3.5 rounded-full font-grotesque transition-all duration-300 disabled:opacity-50"
                 style={{
                   background: "#bdff68",
                   color: "#0b1215",
@@ -152,20 +153,12 @@ function Footer() {
                 {status === "sending" ? "Sending..." : "Send Message →"}
               </button>
               {status === "success" && (
-                <>
-                  {
-                    setTimeout(
-                      () => setStatus("idle"),
-                      5000
-                    ) /* reset after 5s */
-                  }
-                  <span
-                    className="text-sm font-grotesque"
-                    style={{ color: "#bdff68" }}
-                  >
-                    Message sent! I&apos;ll get back to you soon.
-                  </span>
-                </>
+                <span
+                  className="text-base font-grotesque"
+                  style={{ color: "#bdff68" }}
+                >
+                  Message sent! I&apos;ll get back to you soon.
+                </span>
               )}
               {status === "error" && (
                 <span
@@ -190,7 +183,7 @@ function Footer() {
             to="https://www.linkedin.com/in/safiyah-amedu-841229370/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-xs tracking-[0.25em] uppercase font-grotesque transition-opacity hover:opacity-100"
+            className="text-sm font-medium tracking-[0.2em] uppercase font-grotesque transition-opacity hover:opacity-100"
             style={{ color: "var(--text-muted)" }}
           >
             LinkedIn
@@ -199,14 +192,14 @@ function Footer() {
             to="https://drive.google.com/file/d/1hD0bWuAlVsdXq-KdsUmNtaKkeIdD7zkP/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-xs tracking-[0.25em] uppercase font-grotesque transition-opacity hover:opacity-100"
+            className="text-sm font-medium tracking-[0.2em] uppercase font-grotesque transition-opacity hover:opacity-100"
             style={{ color: "var(--text-muted)" }}
           >
             CV
           </Link>
           <a
             href="tel:+2348147143736"
-            className="text-xs tracking-[0.25em] uppercase font-grotesque transition-opacity hover:opacity-100"
+            className="text-sm font-medium tracking-[0.2em] uppercase font-grotesque transition-opacity hover:opacity-100"
             style={{ color: "var(--text-muted)" }}
           >
             +234 814 714 3736
@@ -216,7 +209,7 @@ function Footer() {
         <div className="flex items-center gap-6">
           <button
             onClick={toggleTheme}
-            className="flex items-center gap-2 text-xs tracking-[0.25em] uppercase font-grotesque transition-opacity hover:opacity-100"
+            className="flex items-center gap-2 text-sm font-medium tracking-[0.2em] uppercase font-grotesque transition-opacity hover:opacity-100"
             style={{ color: "var(--text-muted)" }}
             aria-label="Toggle theme"
           >

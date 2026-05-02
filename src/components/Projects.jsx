@@ -158,7 +158,7 @@ function Projects() {
       {/* Section label */}
       <div className="mb-14 sm:mb-10">
         <span
-          className="text-xs tracking-[0.3em] uppercase font-grotesque"
+          className="text-sm font-medium tracking-[0.2em] uppercase font-grotesque"
           style={{ color: "var(--text-muted)" }}
         >
           Selected Work
@@ -166,7 +166,10 @@ function Projects() {
       </div>
 
       {/* Project list */}
-      <div ref={listRef} onMouseLeave={hidePreview}>
+      <div
+        ref={listRef}
+        onMouseLeave={hidePreview}
+      >
         {projects.map((project, i) => {
           const accent = ACCENT_COLORS[project.name] || "#bdff68";
           const isActive = activeIndex === project.id;
@@ -193,7 +196,7 @@ function Projects() {
                 <div className="flex items-start lg:py-20 gap-6 sm:gap-4 flex-1 min-w-0">
                   {/* Number */}
                   <span
-                    className="text-xs font-grotesque pt-2 flex-shrink-0 tabular-nums transition-all duration-300"
+                    className="text-sm font-grotesque pt-2 flex-shrink-0 tabular-nums transition-all duration-300"
                     style={{
                       color: isActive ? accent : "var(--text-faint)",
                       fontWeight: isActive ? 600 : 400,
@@ -216,7 +219,7 @@ function Projects() {
                       {DISPLAY_NAMES[project.name] || project.name}
                     </h3>
                     <p
-                      className="text-sm font-grotesque leading-relaxed max-w-lg sm:max-w-xs line-clamp-2"
+                      className="text-base font-grotesque leading-relaxed max-w-lg sm:max-w-xs"
                       style={{ color: "var(--text-secondary)" }}
                     >
                       {project.previewP}
@@ -224,7 +227,7 @@ function Projects() {
 
                     {/* Tech stack — inline text */}
                     <p
-                      className="text-xs font-grotesque mt-3 tracking-wide"
+                      className="text-sm font-medium font-grotesque mt-3 tracking-wide"
                       style={{ color: "var(--text-muted)" }}
                     >
                       {project.stack.slice(0, 4).map((s, si) => (
@@ -255,13 +258,13 @@ function Projects() {
                 {/* Meta + arrow */}
                 <div className="flex-shrink-0 flex flex-col items-end gap-1.5">
                   <span
-                    className="text-xs font-grotesque tracking-widest uppercase sm:hidden"
+                    className="text-sm font-grotesque tracking-widest uppercase sm:hidden"
                     style={{ color: "var(--text-muted)" }}
                   >
                     {project.type}
                   </span>
                   <span
-                    className="text-xs font-grotesque tabular-nums sm:hidden"
+                    className="text-sm font-grotesque tabular-nums sm:hidden"
                     style={{ color: "var(--text-faint)" }}
                   >
                     {project.year}

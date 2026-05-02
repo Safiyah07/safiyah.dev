@@ -52,7 +52,7 @@ function Header() {
 						<Link
 							key={item.name}
 							to={item.link}
-							className="text-xs tracking-[0.25em] uppercase font-grotesque transition-all duration-300"
+							className="text-sm font-medium tracking-[0.2em] uppercase font-grotesque transition-all duration-300"
 							style={{
 								color: location.pathname === item.link
 									? "var(--green)"
@@ -72,7 +72,7 @@ function Header() {
 					</button>
 					<a
 						href="#contact"
-						className="header-cta text-xs tracking-[0.25em] uppercase px-5 py-2 rounded-full font-grotesque"
+						className="header-cta text-sm font-medium tracking-[0.2em] uppercase px-5 py-2 rounded-full font-grotesque"
 					>
 						Get in touch
 					</a>
@@ -89,7 +89,7 @@ function Header() {
 					</button>
 					<button
 						onClick={() => setMenuOpen((v) => !v)}
-						className="text-xs tracking-[0.25em] uppercase font-grotesque"
+						className="text-sm font-medium tracking-[0.2em] uppercase font-grotesque"
 						style={{ color: "var(--text-secondary)" }}
 					>
 						{menuOpen ? "Close" : "Menu"}
@@ -114,7 +114,7 @@ function Header() {
 				))}
 				<a
 					href="#contact"
-					className="mt-4 text-xs tracking-[0.3em] uppercase px-8 py-3 rounded-full font-grotesque"
+					className="mt-4 text-sm font-medium tracking-[0.2em] uppercase px-8 py-3 rounded-full font-grotesque"
 					style={{ border: "1px solid var(--green)", color: "var(--green)" }}
 				>
 					Get in touch

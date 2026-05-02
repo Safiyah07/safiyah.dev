@@ -46,7 +46,7 @@ function HomeHero() {
       {/* Top label row */}
       <div className="hero-sub flex items-center justify-between mb-14 sm:mb-10">
         <span
-          className="text-xs tracking-[0.3em] uppercase font-grotesque"
+          className="text-sm font-medium tracking-[0.2em] uppercase font-grotesque"
           style={{ color: "var(--text-muted)" }}
         >
           Full-Stack Developer
@@ -57,7 +57,7 @@ function HomeHero() {
             style={{ background: "var(--green)" }}
           />
           <span
-            className="text-xs tracking-[0.3em] uppercase font-grotesque"
+            className="text-sm font-medium tracking-[0.2em] uppercase font-grotesque"
             style={{ color: "var(--green)" }}
           >
             Available for work
@@ -91,7 +91,7 @@ function HomeHero() {
       {/* Sub row */}
       <div className="flex items-end justify-between gap-10 sm:flex-col sm:items-start sm:gap-8">
         <p
-          className="hero-sub text-xl sm:text-lg font-grotesque leading-relaxed max-w-md"
+          className="hero-sub text-2xl sm:text-xl font-grotesque leading-relaxed max-w-md"
           style={{ color: "var(--text-secondary)" }}
         >
           Hi, I&apos;m Safiyah 👋, I build digital products that are as
@@ -99,7 +99,7 @@ function HomeHero() {
         </p>
         <a
           href="#contact"
-          className="hero-sub flex-shrink-0 inline-flex items-center gap-3 text-xs tracking-[0.25em] uppercase px-7 py-3.5 rounded-full font-grotesque transition-all duration-300 hover:gap-5"
+          className="hero-sub flex-shrink-0 inline-flex items-center gap-3 text-sm font-medium tracking-[0.2em] uppercase px-7 py-3.5 rounded-full font-grotesque transition-all duration-300 hover:gap-5"
           style={{
             border: "1px solid var(--green)",
             color: "var(--green)",
@@ -112,7 +112,7 @@ function HomeHero() {
       {/* Scroll indicator */}
       <div className="hero-sub absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3">
         <span
-          className="text-[10px] tracking-[0.35em] uppercase font-grotesque"
+          className="text-xs font-medium tracking-[0.25em] uppercase font-grotesque"
           style={{ color: "var(--text-faint)" }}
         >
           Scroll

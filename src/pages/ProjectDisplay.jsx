@@ -46,7 +46,7 @@ function ProjectDisplay() {
 	if (!project) {
 		return (
 			<div className="min-h-screen flex items-center justify-center">
-				<span className="text-xs tracking-[0.3em] uppercase font-grotesque" style={{ color: "var(--text-faint)" }}>
+				<span className="text-sm font-medium tracking-[0.2em] uppercase font-grotesque" style={{ color: "var(--text-faint)" }}>
 					Loading...
 				</span>
 			</div>
@@ -63,7 +63,7 @@ function ProjectDisplay() {
 			{/* Back */}
 			<Link
 				to="/"
-				className="pd-reveal inline-flex items-center gap-2 text-xs tracking-[0.25em] uppercase font-grotesque mb-14 sm:mb-10 transition-all duration-300 hover:gap-4"
+				className="pd-reveal inline-flex items-center gap-2 text-sm font-medium tracking-[0.2em] uppercase font-grotesque mb-14 sm:mb-10 transition-all duration-300 hover:gap-4"
 				style={{ color: "var(--text-muted)" }}
 			>
 				<BsArrowLeft size={11} /> Back to Work
@@ -72,11 +72,11 @@ function ProjectDisplay() {
 			{/* Header */}
 			<div className="pd-reveal mb-14 sm:mb-10">
 				<div className="flex items-center gap-3 mb-5 flex-wrap">
-					<span className="text-xs tracking-widest uppercase font-grotesque" style={{ color: accent }}>{project.type}</span>
+					<span className="text-sm font-medium tracking-widest uppercase font-grotesque" style={{ color: accent }}>{project.type}</span>
 					<span style={{ color: "var(--text-faint)" }}>—</span>
-					<span className="text-xs tracking-widest uppercase font-grotesque" style={{ color: "var(--text-muted)" }}>{project.year}</span>
+					<span className="text-sm font-medium tracking-widest uppercase font-grotesque" style={{ color: "var(--text-muted)" }}>{project.year}</span>
 					<span style={{ color: "var(--text-faint)" }}>—</span>
-					<span className="text-xs tracking-widest uppercase font-grotesque" style={{ color: "var(--text-muted)" }}>{project.role}</span>
+					<span className="text-sm font-medium tracking-widest uppercase font-grotesque" style={{ color: "var(--text-muted)" }}>{project.role}</span>
 				</div>
 				<div className="flex items-end justify-between sm:flex-col sm:items-start sm:gap-7">
 					<h1 className="text-[clamp(36px,6vw,80px)] leading-[1.0] tracking-tight">
@@ -86,7 +86,7 @@ function ProjectDisplay() {
 						href={project.link}
 						target="_blank"
 						rel="noopener noreferrer"
-						className="flex-shrink-0 flex items-center gap-2 text-xs tracking-[0.25em] uppercase px-7 py-3 rounded-full font-grotesque transition-all duration-300 hover:gap-4"
+						className="flex-shrink-0 flex items-center gap-2 text-sm font-medium tracking-[0.2em] uppercase px-7 py-3 rounded-full font-grotesque transition-all duration-300 hover:gap-4"
 						style={{ border: `1px solid ${accent}`, color: accent }}
 					>
 						{project.isGithub ? "View on GitHub" : "View Live"} ↗
@@ -123,12 +123,12 @@ function ProjectDisplay() {
 				].map(({ label, text }) => (
 					<div key={label} className="pd-reveal">
 						<span
-							className="text-[11px] tracking-[0.3em] uppercase font-grotesque block mb-3"
+							className="text-xs font-medium tracking-[0.2em] uppercase font-grotesque block mb-3"
 							style={{ color: accent }}
 						>
 							{label}
 						</span>
-						<p className="text-base font-grotesque leading-relaxed" style={{ color: "var(--text-secondary)" }}>
+						<p className="text-lg font-grotesque leading-relaxed" style={{ color: "var(--text-secondary)" }}>
 							{text}
 						</p>
 					</div>
@@ -149,7 +149,7 @@ function ProjectDisplay() {
 			{/* Features */}
 			<div className="pd-reveal mb-14">
 				<span
-					className="text-xs tracking-[0.3em] uppercase font-grotesque block mb-8 sm:mb-6"
+					className="text-sm font-medium tracking-[0.2em] uppercase font-grotesque block mb-8 sm:mb-6"
 					style={{ color: accent }}
 				>
 					Key Features
@@ -158,12 +158,12 @@ function ProjectDisplay() {
 					{project.features.map((f, i) => (
 						<div key={i} className="flex gap-4">
 							<span
-								className="text-[11px] font-grotesque pt-0.5 flex-shrink-0 tabular-nums"
+								className="text-xs font-medium font-grotesque pt-0.5 flex-shrink-0 tabular-nums"
 								style={{ color: accent, opacity: 0.7 }}
 							>
 								{String(i + 1).padStart(2, "0")}
 							</span>
-							<p className="text-base font-grotesque leading-relaxed" style={{ color: "var(--text-secondary)" }}>
+							<p className="text-lg font-grotesque leading-relaxed" style={{ color: "var(--text-secondary)" }}>
 								{f.list}
 							</p>
 						</div>
@@ -174,14 +174,14 @@ function ProjectDisplay() {
 			{/* Tech stack */}
 			<div className="pd-reveal mb-14">
 				<span
-					className="text-xs tracking-[0.3em] uppercase font-grotesque block mb-6"
+					className="text-sm font-medium tracking-[0.2em] uppercase font-grotesque block mb-6"
 					style={{ color: accent }}
 				>
 					Tech Stack
 				</span>
 				<div className="flex flex-wrap gap-x-8 gap-y-2">
 					{project.stack.map((s) => (
-						<span key={s.name} className="text-base font-grotesque" style={{ color: "var(--text-secondary)" }}>
+						<span key={s.name} className="text-lg font-grotesque" style={{ color: "var(--text-secondary)" }}>
 							{s.name}
 						</span>
 					))}
@@ -193,7 +193,7 @@ function ProjectDisplay() {
 				className="pd-reveal pt-12"
 				style={{ borderTop: "1px solid var(--text-faint)" }}
 			>
-				<p className="text-lg sm:text-base font-grotesque leading-relaxed max-w-2xl" style={{ color: "var(--text-secondary)" }}>
+				<p className="text-xl sm:text-lg font-grotesque leading-relaxed max-w-2xl" style={{ color: "var(--text-secondary)" }}>
 					{project.outro}
 				</p>
 			</div>
