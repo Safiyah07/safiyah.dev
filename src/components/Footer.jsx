@@ -189,7 +189,7 @@ function Footer() {
             LinkedIn
           </Link>
           <Link
-            to="https://drive.google.com/file/d/1qG2k5muiYRGWea_tIhHVFczzhWrq5-yQ/view?usp=sharing"
+            to="https://drive.google.com/file/d/1fFMCPiLID2FFkKNwP00PM1ljrEMn9FaT/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
             className="text-sm font-medium tracking-[0.2em] uppercase font-grotesque transition-opacity hover:opacity-100"
